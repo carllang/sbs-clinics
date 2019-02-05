@@ -5,12 +5,32 @@ module.exports = {
     author: `Carl Lang`,
     menuLinks: [
       {
-        name: "home",
+        name: "Home",
         link: "/"
       },
       {
-        name: "about",
+        name: "About",
         link: "/about"
+      },
+      {
+        name: "Sectors",
+        link: "/sectors"
+      },
+      {
+        name: "Services",
+        link: "/services"
+      },
+      {
+        name: "News",
+        link: "/news"
+      },
+      {
+        name: "Case studies",
+        link: "/case-studies"
+      },
+      {
+        name: "Contact",
+        link: "/contact"
       }
     ]
   },
@@ -24,7 +44,13 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

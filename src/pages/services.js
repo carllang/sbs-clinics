@@ -4,11 +4,11 @@ import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
 
-const About = ({ data }) => {
+const Services = ({ data }) => {
   console.log(data);
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="Page two" />
       <h1
         dangerouslySetInnerHTML={{
           __html: data.allWordpressPage.edges[0].node.title
@@ -24,7 +24,7 @@ const About = ({ data }) => {
   );
 };
 
-export default About;
+export default Services;
 
 export const query = graphql`
   query {

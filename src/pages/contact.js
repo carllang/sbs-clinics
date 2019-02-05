@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
 
-const About = ({ data }) => {
+const Contact = ({ data }) => {
   console.log(data);
   return (
     <Layout>
@@ -24,7 +24,7 @@ const About = ({ data }) => {
   );
 };
 
-export default About;
+export default Contact;
 
 export const query = graphql`
   query {
