@@ -1,12 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Nav from "./Atomic/Nav";
-import Image from "./image";
+import Nav from "src/components/Atomic/Nav";
+
+import { ImageGallery } from "src/components/Slick";
 
 const Header = ({ siteTitle, menuLinks }) => (
   <header>
     <Nav menuLinks={menuLinks} />
-    <Image image="pacific.jpg" />
+    <ImageGallery
+      images={[
+        "pacific.jpg",
+        "reinaldo-kevin-640696-unsplash.jpg",
+        "samuel-zeller-110931-unsplash.jpg",
+        "toa-heftiba-644507-unsplash",
+        "worapong-kaewtong-553394-unsplash"
+      ]}
+    />
   </header>
 );
 

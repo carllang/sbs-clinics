@@ -5,10 +5,9 @@ import Layout from "../components/Layout";
 import SEO from "../components/seo";
 
 const Contact = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="Contact Us" />
       <h1
         dangerouslySetInnerHTML={{
           __html: data.allWordpressPage.edges[0].node.title

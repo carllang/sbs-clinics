@@ -5,10 +5,9 @@ import Layout from "../components/Layout";
 import SEO from "../components/seo";
 
 const Sectors = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Sectors" />
       <h1>Wordpress date: {data.allWordpressPage.edges[0].node.date}</h1>
       <h1>Wordpress title: {data.allWordpressPage.edges[0].node.title}</h1>
       <p>{data.allWordpressPage.edges[0].node.content}</p>
