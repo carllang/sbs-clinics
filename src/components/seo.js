@@ -19,14 +19,6 @@ function SEO({ description, lang, meta, keywords, title }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            link={[
-              {
-                rel: "icon",
-                type: "image/png",
-                sizes: "32x32",
-                href: `${favicon32}`
-              }
-            ]}
             meta={[
               {
                 name: `description`,
@@ -70,6 +62,14 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : []
               )
               .concat(meta)}
+            link={[
+              {
+                rel: "icon",
+                type: "image/png",
+                sizes: "32x32",
+                href: `${favicon32}`
+              }
+            ]}
           />
         );
       }}
