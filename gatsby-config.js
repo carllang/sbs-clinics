@@ -85,6 +85,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.js`
       }
     },
-    "gatsby-plugin-root-import"
+    "gatsby-plugin-root-import",
+    `gatsby-plugin-sass`
   ]
 };

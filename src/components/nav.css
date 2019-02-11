@@ -1,4 +1,40 @@
-@media all and (max-width: 780px) {
+.active-link {
+  font-weight: bold;
+}
+#drawer li > a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#drawer li > a:hover {
+  font-weight: bold;
+}
+
+#drawer {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+@media all and (min-width: 767px) {
+  #drawer ul {
+    list-style-type: none;
+  }
+
+  #drawer-toggle {
+    display: none;
+  }
+}
+
+nav {
+  font-size: 1.3em;
+}
+
+@media all and (max-width: 768px) {
+  #drawer {
+    display: block;
+  }
+
   * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -70,7 +106,7 @@
 
   /* actual page content pane */
 
-  #page-content {
+  .page-content {
     margin-right: 0px;
 
     width: 100%;
@@ -96,7 +132,7 @@
     right: 0px;
   }
 
-  #drawer-toggle:checked ~ #page-content {
+  #drawer-toggle:checked ~ .page-content {
     margin-left: -300px;
   }
 
@@ -116,6 +152,10 @@
   #drawer ul a:hover {
     color: white;
   }
+  #drawer li {
+    display: block;
+    margin-right: 20px;
+  }
 }
 /* Responsive MQ */
 
@@ -134,7 +174,7 @@
     width: calc(100% - 50px);
   }
 
-  #drawer-toggle:checked ~ #page-content {
+  #drawer-toggle:checked ~ .page-content {
     margin-right: calc(100% - 50px);
   }
 }
