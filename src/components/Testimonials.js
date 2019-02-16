@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
-
+import { LayoutContainer } from "src/components/Layout/LayoutContainer";
 const settings = {
   dots: true,
   infinite: true,
@@ -16,23 +16,27 @@ const settings = {
 const TestimonialWrapper = styled.article`
   text-align: center;
   background: beige;
+  padding: 20px;
 `;
 
 const Testimonials = ({ testimonials }) => {
   return (
-    <div>
-      <Slider {...settings}>
-        {testimonials &&
-          testimonials.map((testimonial, key) => {
-            return (
-              <TestimonialWrapper key={key}>
-                <h3>{testimonial.title}</h3>
-                <p>{testimonial.quote}</p>
-              </TestimonialWrapper>
-            );
-          })}
-      </Slider>
-    </div>
+    <TestimonialWrapper>
+      <h2>Testimonials</h2>
+      <LayoutContainer>
+        <Slider {...settings}>
+          {testimonials &&
+            testimonials.map((testimonial, key) => {
+              return (
+                <div key={key}>
+                  <h3>{testimonial.title}</h3>
+                  <p>{testimonial.quote}</p>
+                </div>
+              );
+            })}
+        </Slider>
+      </LayoutContainer>
+    </TestimonialWrapper>
   );
 };
 

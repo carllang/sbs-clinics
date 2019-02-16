@@ -9,6 +9,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   list-style-type: none;
   margin: 50px 20px 0 0;
+  color: #ffffff;
   @media all and (min-width: 767px) {
     display: inline-block;
   }

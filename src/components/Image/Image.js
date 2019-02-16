@@ -23,7 +23,7 @@ const Image = props => (
               relativePath
               name
               childImageSharp {
-                sizes(maxWidth: 1000) {
+                sizes(maxWidth: 5000) {
                   ...GatsbyImageSharpSizes
                 }
               }
@@ -41,8 +41,8 @@ const Image = props => (
       }
 
       const imageSizes = image.node.childImageSharp.sizes;
-      return <Img alt={props.alt} sizes={imageSizes} />;
+      return <Img {...props} sizes={imageSizes} fadeIn />;
     }}
   />
 );
-export default Image;
+export { Image };

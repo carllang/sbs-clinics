@@ -3,18 +3,18 @@ import PropTypes from "prop-types";
 import Nav from "src/components/Nav";
 import styled from "styled-components";
 import { ImageGallery } from "src/components/Slick";
-import Image from "src/components/image";
+import { Image } from "src/components/Image";
 
 const NavContainer = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0px;
   z-index: 9;
-  // background-color: #ffffff;
-  opacity: 0.7;
+  background-color: #000000;
+  opacity: 1;
   width: 100%;
-  border-bottom: 1px solid #000000;
-
+  border-bottom: 1px solid #cccccc;
+  color: #ffffff;
   @media all and (max-width: 768px) {
     opacity: 1;
     position: relative;
@@ -40,9 +40,22 @@ const Header = ({ menuLinks, page }) => {
         <div className="page-content">
           <ImageGallery
             images={[
-              "toa-heftiba-644507-unsplash.jpg",
-              "pacific.jpg",
-              "worapong-kaewtong-553394-unsplash.jpg"
+              {
+                src: "nastuh-abootalebi-284877-unsplash.jpg",
+                title: "Title 1"
+              },
+              {
+                src: "samuel-zeller-110931-unsplash.jpg",
+                title: "Title 2"
+              },
+              {
+                src: "christopher-burns-368617-unsplash.jpg",
+                title: "Title 3"
+              },
+              {
+                src: "daniel-frank-201417-unsplash.jpg",
+                title: "Title 4"
+              }
             ]}
           />
         </div>
@@ -64,4 +77,4 @@ Header.defaultProps = {
   siteTitle: ``
 };
 
-export default Header;
+export { Header };

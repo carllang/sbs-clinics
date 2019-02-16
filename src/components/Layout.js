@@ -1,16 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import Header from "./Header";
+import { Header } from "src/components/Header";
 import styled from "styled-components";
 
 import "./layout.scss";
 import "./nav.css";
 
 const Container = styled.div`
-  margin: 0px auto;
-  max-width: 960px;
-  padding: 20px 1.5rem 2rem;
   text-align: justify;
 `;
 
