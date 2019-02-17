@@ -19,7 +19,8 @@ const settings = {
 const TestimonialWrapper = styled.article`
   text-align: center;
   background: beige;
-  padding: 20px;
+  padding: 40px;
+  margin: 60px 0;
 `;
 
 const Testimonials = ({ testimonials }) => {

@@ -96,10 +96,8 @@
 
   .page-content {
     margin-right: 0px;
-
     width: 100%;
     height: calc(100% - 50px);
-
     -webkit-overflow-scrolling: touch;
   }
 
