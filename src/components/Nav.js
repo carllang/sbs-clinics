@@ -8,23 +8,32 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   list-style-type: none;
-  margin: 50px 20px 0 0;
+  margin: 0px 20px 0 0;
   color: #ffffff;
   @media all and (min-width: 767px) {
     display: inline-block;
   }
 `;
 
-const Nav = ({ menuLinks }) => {
+const StyledLink = styled(Link)`
+  color: ${props => (props.color === "white" ? "#ffffff" : "#000000")};
+  text-decoration: none;
+`;
+
+const Nav = ({ menuLinks, colour }) => {
   return (
     <>
       <nav>
         <Ul>
           {menuLinks.map(link => (
             <Li key={link.name} style={{ listStyleType: "none" }}>
-              <Link to={link.link} activeClassName="active-link">
+              <StyledLink
+                to={link.link}
+                activeClassName="active-link"
+                color={colour}
+              >
                 {link.name}
-              </Link>
+              </StyledLink>
             </Li>
           ))}
         </Ul>

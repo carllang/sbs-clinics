@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Header } from "src/components/Header";
 import styled from "styled-components";
+import { Header } from "src/components/Header";
+import Footer from "src/components/Footer";
 
 import "./layout.scss";
 import "./nav.css";
@@ -33,9 +34,12 @@ const Layout = ({ children, page }, ...props) => (
         <div className="page-content bottom-container">
           <Container>
             <main>{children}</main>
-            <footer>
-              {data.site.siteMetadata.title} © {new Date().getFullYear()}
-            </footer>
+            <Footer
+              siteTitle={`© ${new Date().getFullYear()} ${
+                data.site.siteMetadata.title
+              }`}
+              menuLinks={data.site.siteMetadata.menuLinks}
+            />
           </Container>
         </div>
       </>

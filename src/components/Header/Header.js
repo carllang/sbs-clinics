@@ -15,6 +15,7 @@ const NavContainer = styled.div`
   width: 100%;
   border-bottom: 1px solid #cccccc;
   color: #ffffff;
+  padding-top: 40px;
   @media all and (max-width: 768px) {
     opacity: 1;
     position: relative;
@@ -28,7 +29,7 @@ const Header = ({ menuLinks, page }) => {
       <input type="checkbox" id="drawer-toggle" name="drawer-toggle" />
       <label htmlFor="drawer-toggle" id="drawer-toggle-label" />
       <NavContainer id="drawer">
-        <Nav menuLinks={menuLinks} />
+        <Nav menuLinks={menuLinks} colour="white" />
       </NavContainer>
       {page === "home" ? (
         <div className="page-content">

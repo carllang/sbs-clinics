@@ -1,14 +1,6 @@
 .active-link {
   font-weight: bold;
 }
-#drawer li > a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-#drawer li > a:hover {
-  font-weight: bold;
-}
 
 #drawer {
   display: flex;
@@ -24,10 +16,6 @@
   #drawer-toggle {
     display: none;
   }
-}
-
-nav {
-  font-size: 1.3em;
 }
 
 @media all and (max-width: 768px) {
@@ -136,22 +124,6 @@ nav {
     margin-left: -300px;
   }
 
-  /* Menu item styles */
-
-  #drawer ul {
-    list-style-type: none;
-    font-size: 0.7em;
-  }
-
-  #drawer ul a {
-    display: block;
-    color: #c7c7c7;
-    text-decoration: none;
-  }
-
-  #drawer ul a:hover {
-    color: white;
-  }
   #drawer li {
     display: block;
     margin-right: 20px;
