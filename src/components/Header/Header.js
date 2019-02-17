@@ -11,7 +11,7 @@ const NavContainer = styled.div`
   right: 0px;
   z-index: 9;
   background-color: #000000;
-  opacity: 1;
+  opacity: 0.6;
   width: 100%;
   border-bottom: 1px solid #cccccc;
   color: #ffffff;
@@ -20,12 +20,6 @@ const NavContainer = styled.div`
     position: relative;
     border-bottom: none;
   }
-`;
-
-const Menu = styled.div`
-  position: absolute;
-  top: 0px;
-  right: 0px;
 `;
 
 const Header = ({ menuLinks, page }) => {
@@ -42,19 +36,19 @@ const Header = ({ menuLinks, page }) => {
             images={[
               {
                 src: "nastuh-abootalebi-284877-unsplash.jpg",
-                title: "Title 1"
+                title: "Smart Building Solutions"
               },
               {
                 src: "samuel-zeller-110931-unsplash.jpg",
-                title: "Title 2"
+                title: "Dedicated Design Teams"
               },
               {
                 src: "christopher-burns-368617-unsplash.jpg",
-                title: "Title 3"
+                title: "Expert Craftsmen"
               },
               {
                 src: "daniel-frank-201417-unsplash.jpg",
-                title: "Title 4"
+                title: "Friendly Consultation"
               }
             ]}
           />

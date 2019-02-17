@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import { LayoutContainer } from "src/components/Layout/LayoutContainer";
+
+import "./testimonials.css";
+
 const settings = {
   dots: true,
   infinite: true,
@@ -21,7 +24,7 @@ const TestimonialWrapper = styled.article`
 
 const Testimonials = ({ testimonials }) => {
   return (
-    <TestimonialWrapper>
+    <TestimonialWrapper id="Testimonials">
       <h2>Testimonials</h2>
       <LayoutContainer>
         <Slider {...settings}>
@@ -29,8 +32,10 @@ const Testimonials = ({ testimonials }) => {
             testimonials.map((testimonial, key) => {
               return (
                 <div key={key}>
-                  <h3>{testimonial.title}</h3>
-                  <p>{testimonial.quote}</p>
+                  <p>"{testimonial.quote}"</p>
+
+                  <h3>{testimonial.name}</h3>
+                  <h3>{testimonial.company}</h3>
                 </div>
               );
             })}

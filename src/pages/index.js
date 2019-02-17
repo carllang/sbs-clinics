@@ -10,7 +10,7 @@ import { LayoutContainer } from "src/components/Layout/LayoutContainer";
 const SectionHomeGallery = styled.section`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 60px 0 20px;
   @media all and (max-width: 768px) {
     flex-wrap: wrap;
   }
@@ -96,8 +96,21 @@ const IndexPage = ({ data }) => (
     <section>
       <Testimonials
         testimonials={[
-          { title: "TitRandom title", quote: "Random Quote" },
-          { title: "More Title", quote: "More Quote" }
+          {
+            name: "Dr. A. Harrow",
+            company: "Dental Surgery, Chelsea",
+            quote: "Excellent service and delightful results."
+          },
+          {
+            name: "Dr. J. Smith",
+            company: "Cromwell Hospital",
+            quote: "We would recommend SBS to our company partners"
+          },
+          {
+            name: "Dr. J. Smith",
+            company: "Cromwell Hospital",
+            quote: "Above and beyond quality and exceptional craftsmanship"
+          }
         ]}
       />
     </section>

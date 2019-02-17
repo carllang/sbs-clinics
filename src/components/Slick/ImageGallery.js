@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Image } from "src/components/Image";
 
 const SliderWrapper = styled.div`
-  margin-top: -200px;
+  margin-top: -300px;
   @media all and (max-width: 768px) {
     margin-top: 0px;
   }
@@ -12,15 +12,35 @@ const SliderWrapper = styled.div`
 
 const ItemWrapper = styled.div`
   position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin-top: 300px;
+  background-color: #000000;
+  @media all and (max-width: 768px) {
+    margin-top: 0px;
+  }
 `;
 
 const ImageWrapper = styled.div`
-  position: relative;
+  position: absolute;
+  display: block;
   top: 0px;
   left: 0px;
+  width: 100%;
+  opacity: 0.6;
 `;
 
-const HeroTitle = styled.div``;
+const TitleWrapper = styled.h2`
+  z-index: 10;
+  color: #ffffff;
+  font-size: 4em;
+  @media all and (max-width: 768px) {
+    font-size: 3em;
+  }
+`;
 
 class HeaderImageGallery extends Component {
   state = {
@@ -30,7 +50,7 @@ class HeaderImageGallery extends Component {
       speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 5000,
       arrows: false,
       fade: false
@@ -47,7 +67,7 @@ class HeaderImageGallery extends Component {
               return (
                 <div>
                   <ItemWrapper key={key}>
-                    {/* <h1>{image.title}</h1> */}
+                    <TitleWrapper>{image.title}</TitleWrapper>
                     <ImageWrapper>
                       <Image image={image.src} title={image.title} />
                     </ImageWrapper>
