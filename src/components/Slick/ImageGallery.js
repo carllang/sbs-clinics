@@ -65,8 +65,8 @@ class HeaderImageGallery extends Component {
           {images &&
             images.map((image, key) => {
               return (
-                <div>
-                  <ItemWrapper key={key}>
+                <div key={key}>
+                  <ItemWrapper>
                     <TitleWrapper>{image.title}</TitleWrapper>
                     <ImageWrapper>
                       <Image image={image.src} title={image.title} />

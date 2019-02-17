@@ -1,24 +1,24 @@
 import React from "react";
-import { Link } from "gatsby";
-
-import Layout from "../components/Layout";
-import SEO from "../components/seo";
+import Layout from "src/components/Layout";
+import SEO from "src/components/seo";
+import { LayoutContainer } from "src/components/Layout/LayoutContainer";
 
 const CaseStudies = ({ data }) => {
   return (
-    <Layout>
+    <Layout page="case-studies">
       <SEO title="Case Studies" />
-      <h1
-        dangerouslySetInnerHTML={{
-          __html: data.allWordpressPage.edges[0].node.title
-        }}
-      />
-      <p
-        dangerouslySetInnerHTML={{
-          __html: data.allWordpressPage.edges[0].node.content
-        }}
-      />
-      <Link to="/">Go back to the homepage</Link>
+      <LayoutContainer>
+        <h1
+          dangerouslySetInnerHTML={{
+            __html: data.allWordpressPage.edges[0].node.title
+          }}
+        />
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.allWordpressPage.edges[0].node.content
+          }}
+        />
+      </LayoutContainer>
     </Layout>
   );
 };

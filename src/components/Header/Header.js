@@ -23,6 +23,25 @@ const NavContainer = styled.div`
   }
 `;
 
+const renderHeaderImage = page => {
+  switch (page) {
+    case "about":
+      return "worapong-kaewtong-553394-unsplash.jpg";
+    case "sectors":
+      return "nastuh-abootalebi-284877-unsplash.jpg";
+    case "services":
+      return "martha-dominguez-de-gouveia-572635-unsplash.jpg";
+    case "news":
+      return "apartment-ceiling-chair-263201.jpg";
+    case "case-studies":
+      return "toa-heftiba-644507-unsplash.jpg";
+    case "contact":
+      return "marko-pekic-145777-unsplash.jpg";
+    default:
+      "worapong-kaewtong-553394-unsplash.jpg";
+  }
+};
+
 const Header = ({ menuLinks, page }) => {
   return (
     <>
@@ -55,10 +74,7 @@ const Header = ({ menuLinks, page }) => {
           />
         </div>
       ) : (
-        <Image
-          image="martha-dominguez-de-gouveia-572635-unsplash.jpg"
-          className="header-image"
-        />
+        <Image image={renderHeaderImage(page)} className="header-image" />
       )}
     </>
   );

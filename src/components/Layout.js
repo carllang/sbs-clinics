@@ -30,7 +30,6 @@ const Layout = ({ children, page }, ...props) => (
     render={data => (
       <>
         <Header menuLinks={data.site.siteMetadata.menuLinks} page={page} />
-
         <div className="page-content bottom-container">
           <Container>
             <main>{children}</main>
