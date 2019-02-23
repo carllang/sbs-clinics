@@ -4,10 +4,9 @@ import SEO from "src/components/seo";
 import { LayoutContainer } from "src/components/Layout/LayoutContainer";
 
 const NotFoundPage = () => (
-  <Layout page="404">
+  <Layout page="404" headerTitle="404">
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist.</p>
+    <h1>Page not found</h1>
   </Layout>
 );
 

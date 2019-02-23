@@ -44,7 +44,7 @@ class Contact extends React.Component {
   render() {
     const { emailSent } = this.state;
     return (
-      <Layout page="contact">
+      <Layout page="contact" headerTitle="Contact us">
         <SEO title="Contact Us" />
 
         <LayoutContainer>

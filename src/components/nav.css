@@ -1,5 +1,4 @@
 .active-link {
-  font-weight: bold;
 }
 
 #drawer {
@@ -49,6 +48,7 @@
   }
 
   #drawer-toggle-label {
+    z-index: 999;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -61,7 +61,7 @@
     display: block;
     position: fixed;
     background: rgba(255, 255, 255, 0);
-    z-index: 1;
+    z-index: 9999;
   }
 
   /* adds our "hamburger" menu icon */
@@ -70,12 +70,12 @@
     content: "";
     display: block;
     position: absolute;
-    height: 2px;
+    height: 3px;
     width: 24px;
-    background: #8d8d8d;
+    background: #ffffff;
     right: 13px;
     top: 18px;
-    box-shadow: 0 6px 0 #8d8d8d, 0 12px 0 #8d8d8d;
+    box-shadow: 0 6px 0 #ffffff, 0 12px 0 #ffffff;
   }
 
   /* drawer menu pane - note the 0px width */
@@ -87,7 +87,6 @@
     height: 100%;
     width: 300px;
     background: #2f2f2f;
-
     padding: 20px;
     -webkit-overflow-scrolling: touch;
   }
@@ -97,16 +96,30 @@
   .page-content {
     margin-right: 0px;
     width: 100%;
-    height: calc(100% - 50px);
     -webkit-overflow-scrolling: touch;
   }
 
   /* checked styles (menu open state) */
+  #drawer-toggle:checked ~ .logo {
+    display: none;
+  }
+
+  /* checked styles (menu open state) */
+  #drawer-toggle:checked ~ .logo {
+    display: none;
+  }
 
   #drawer-toggle:checked ~ #drawer-toggle-label {
     height: 100%;
     width: calc(100% - 300px);
     background: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+  }
+
+  #drawer-toggle:checked ~ #drawer-toggle-label:before {
+    background-color: #000000;
+    box-shadow: 0 6px 0 #000000, 0 12px 0 #000000;
+    z-index: 9999;
   }
 
   #drawer-toggle:checked ~ #drawer-toggle-label,
@@ -125,6 +138,7 @@
   #drawer li {
     display: block;
     margin-right: 20px;
+    margin-bottom: 20px;
   }
 }
 /* Responsive MQ */

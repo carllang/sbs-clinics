@@ -5,7 +5,7 @@ import { LayoutContainer } from "src/components/Layout/LayoutContainer";
 
 const PrivacyPolicy = ({ data }) => {
   return (
-    <Layout page="privacy-policy">
+    <Layout page="privacy-policy" headerTitle="Privacy Policy">
       <SEO title="Privacy Policy" />
       <LayoutContainer>
         <h1

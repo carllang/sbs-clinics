@@ -8,6 +8,7 @@ const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   a {
     font-size: 0.9em;
     color: #666666;
@@ -16,11 +17,16 @@ const FooterWrapper = styled.div`
     font-size: 0.7em;
     color: #666666;
   }
+  .active-link {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #000000;
+  }
 `;
 
 const Footer = ({ siteTitle, menuLinks }) => {
   return (
-    <div style={{ borderTop: "1px solid #666666" }}>
+    <div style={{ borderTop: "1px solid #efefef", backgroundColor: "#ffffff" }}>
       <LayoutContainer>
         <FooterWrapper>
           <span className="footer-title">{siteTitle} </span>

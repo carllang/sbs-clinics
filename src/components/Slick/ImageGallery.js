@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { Image } from "src/components/Image";
 
 const SliderWrapper = styled.div`
-  margin-top: -300px;
   @media all and (max-width: 768px) {
     margin-top: 0px;
   }
@@ -16,9 +15,12 @@ const ItemWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  margin-top: 300px;
+  height: 60vh;
   background-color: #000000;
+  h2 {
+    margin-top: 12vh;
+    margin-bottom: 0;
+  }
   @media all and (max-width: 768px) {
     margin-top: 0px;
   }

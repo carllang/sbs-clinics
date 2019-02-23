@@ -19,8 +19,16 @@ const settings = {
 const TestimonialWrapper = styled.article`
   text-align: center;
   background: beige;
-  padding: 40px;
+  padding: 20px 0 20px;
   margin: 60px 0;
+  h3,
+  h2 {
+    margin-bottom: 2px;
+  }
+`;
+
+const Quote = styled.p`
+  font-style: italic;
 `;
 
 const Testimonials = ({ testimonials }) => {
@@ -33,7 +41,7 @@ const Testimonials = ({ testimonials }) => {
             testimonials.map((testimonial, key) => {
               return (
                 <div key={key}>
-                  <p>"{testimonial.quote}"</p>
+                  <Quote>"{testimonial.quote}"</Quote>
 
                   <h3>{testimonial.name}</h3>
                   <h3>{testimonial.company}</h3>

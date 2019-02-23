@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { Header } from "src/components/Header";
 import Footer from "src/components/Footer";
+import { Logo } from "src/components/Atomic/Logo";
 
 import "./layout.scss";
 import "./nav.css";
@@ -12,7 +13,7 @@ const Container = styled.div`
   text-align: justify;
 `;
 
-const Layout = ({ children, page }, ...props) => (
+const Layout = ({ children, page, headerTitle }, ...props) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -29,7 +30,12 @@ const Layout = ({ children, page }, ...props) => (
     `}
     render={data => (
       <>
-        <Header menuLinks={data.site.siteMetadata.menuLinks} page={page} />
+        <Logo className="page-content">SBS</Logo>
+        <Header
+          menuLinks={data.site.siteMetadata.menuLinks}
+          page={page}
+          headerTitle={headerTitle}
+        />
         <div className="page-content bottom-container">
           <Container>
             <main>{children}</main>

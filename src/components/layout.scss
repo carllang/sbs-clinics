@@ -269,13 +269,13 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 2vw;
   line-height: 1.1;
 }
 
@@ -305,13 +305,13 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 1.3vw;
   line-height: 1.1;
 }
 
@@ -645,9 +645,9 @@ pre {
 }
 
 .bottom-container {
-  background-color: #ffffff;
+  background-color: #f7f7f7;
   position: absolute;
-  top: 600px;
+  top: 60%;
   width: 100%;
 }
 
@@ -656,9 +656,15 @@ pre {
     font-size: 100%;
   }
   .bottom-container {
-    background-color: #ffffff;
     position: absolute;
     top: 200px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 1024px) {
+  .bottom-container {
+    position: absolute;
     width: 100%;
   }
 }

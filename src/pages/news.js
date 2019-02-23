@@ -5,7 +5,7 @@ import { LayoutContainer } from "src/components/Layout/LayoutContainer";
 
 const News = ({ data }) => {
   return (
-    <Layout page="news">
+    <Layout page="news" headerTitle="News">
       <SEO title="News" />
       <LayoutContainer>
         <h1

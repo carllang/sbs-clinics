@@ -5,7 +5,7 @@ import { LayoutContainer } from "src/components/Layout/LayoutContainer";
 
 const CaseStudies = ({ data }) => {
   return (
-    <Layout page="case-studies">
+    <Layout page="case-studies" headerTitle="Our Work">
       <SEO title="Case Studies" />
       <LayoutContainer>
         <h1
