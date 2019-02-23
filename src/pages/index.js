@@ -6,7 +6,8 @@ import { Image } from "src/components/Image";
 import SEO from "src/components/seo";
 import Testimonials from "src/components/Testimonials";
 import { LayoutContainer } from "src/components/Layout/LayoutContainer";
-
+import { Lightbox } from "src/components/Lightbox";
+import { ImageGallery } from "src/components/Slick";
 const SectionHomeGallery = styled.section`
   display: flex;
   justify-content: space-between;
@@ -57,10 +58,10 @@ const IndexPage = ({ data }) => (
         exceptional delivery for all your building and construction needs. Give
         us a call or drop us a line for a friendly consultation.
       </p>
-
+      <Lightbox />
       <SectionHomeGallery className="Home">
         <ImageContainer>
-          <Image image="1.jpg" />
+          <Image image="1-first.jpg" />
         </ImageContainer>
         <ImageSpacer />
         <ImageContainer>
@@ -72,7 +73,7 @@ const IndexPage = ({ data }) => (
         </ImageContainer>
         <ImageSpacer />
         <ImageContainer>
-          <Image image="4.jpg" />
+          <Image image="4-fourth.jpg" />
         </ImageContainer>
       </SectionHomeGallery>
       <SectionHomeGallery className="Home">

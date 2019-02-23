@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  background-image: linear-gradient(to bottom right, #05668d, #02c39a);
+  background-image: linear-gradient(to bottom right, #000000, #666666);
   border: none;
   display: inline;
   color: #ffffff;

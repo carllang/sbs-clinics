@@ -48,7 +48,6 @@
   }
 
   #drawer-toggle-label {
-    z-index: 999;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -59,8 +58,7 @@
     height: 50px;
     width: 50px;
     display: block;
-    position: fixed;
-    background: rgba(255, 255, 255, 0);
+    position: absolute;
     z-index: 9999;
   }
 
