@@ -86,6 +86,12 @@ module.exports = {
       }
     },
     "gatsby-plugin-root-import",
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/images/favicon32.png"
+      }
+    }
   ]
 };

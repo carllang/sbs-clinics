@@ -18,9 +18,10 @@ const settings = {
 
 const TestimonialWrapper = styled.article`
   text-align: center;
-  background: beige;
+  background: #333333;
+  color: #ffffff;
   padding: 20px 0 20px;
-  margin: 60px 0;
+  margin: 60px 0 0;
   h3,
   h2 {
     margin-bottom: 2px;

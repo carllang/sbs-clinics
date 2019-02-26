@@ -1,9 +1,15 @@
 import React, { Component } from "react";
-import { PopupboxManager, PopupboxContainer } from "react-popupbox";
-import "../../../node_modules/react-popupbox/dist/react-popupbox.css";
-import { ImageGallery } from "src/components/Slick";
+import styled from "styled-components";
 import { Image } from "src/components/Image";
 import Slider from "react-slick";
+import { PopupboxManager, PopupboxContainer } from "react-popupbox";
+import "../../../node_modules/react-popupbox/dist/react-popupbox.css";
+import "./Lightbox.css";
+
+const Container = styled.div`
+  max-height: 90vh;
+`;
+
 class Lightbox extends Component {
   openPopupbox() {
     const settings = {
@@ -18,14 +24,14 @@ class Lightbox extends Component {
       fade: false
     };
     const content = (
-      <div>
+      <Container>
         <Slider {...settings}>
-          <Image image="2.jpg" />
-          <Image image="3.jpg" />
+          <Image image="2.jpg" style={{ height: "100vh" }} />
+          {/* <Image image="3.jpg" />
           <Image image="5.jpg" />
-          <Image image="6.jpg" />
+          <Image image="6.jpg" /> */}
         </Slider>
-      </div>
+      </Container>
     );
     PopupboxManager.open({ content });
   }
