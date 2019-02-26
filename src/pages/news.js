@@ -4,20 +4,20 @@ import SEO from "src/components/seo";
 import { LayoutContainer } from "src/components/Layout/LayoutContainer";
 
 const News = ({ data }) => {
+  console.log(data);
   return (
     <Layout page="news" headerTitle="News">
       <SEO title="News" />
       <LayoutContainer>
-        <h1
-          dangerouslySetInnerHTML={{
-            __html: data.allWordpressPage.edges[0].node.title
-          }}
-        />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: data.allWordpressPage.edges[0].node.content
-          }}
-        />
+        {data.allMarkdownRemark.edges.map((edge, key) => {
+          return (
+            <div key={key}>
+              <h2>{edge.node.frontmatter.title}</h2>
+
+              <p>{edge.node.excerpt}</p>
+            </div>
+          );
+        })}
       </LayoutContainer>
     </Layout>
   );
@@ -27,13 +27,20 @@ export default News;
 
 export const query = graphql`
   query {
-    allWordpressPage {
+    allMarkdownRemark {
       edges {
         node {
-          title
-          status
-          date
-          content
+          excerpt
+          headings {
+            value
+            depth
+          }
+          fileAbsolutePath
+          frontmatter {
+            title
+            path
+            date
+          }
         }
       }
     }

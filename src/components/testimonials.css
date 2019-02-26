@@ -1,11 +1,19 @@
 #Testimonials h3 {
   font-size: 1em;
   font-weight: bold;
-  color: #666666;
+  color: #888888;
 }
 
 #Testimonials p {
   font-size: 1em;
   font-weight: normal;
-  color: #999999;
+  color: #ffffff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffffff;
+}
+
+.slick-dots li button:before {
+  color: #bbbbbb;
 }

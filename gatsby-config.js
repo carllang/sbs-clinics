@@ -43,6 +43,13 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-news`,
+        path: `${__dirname}/src/markdown/news`
+      }
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
@@ -91,6 +98,13 @@ module.exports = {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/images/favicon32.png"
+      }
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 1000
       }
     }
   ]

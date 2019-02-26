@@ -13,7 +13,8 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 4000,
-  arrows: false
+  arrows: false,
+  fade: true
 };
 
 const TestimonialWrapper = styled.article`
@@ -30,12 +31,17 @@ const TestimonialWrapper = styled.article`
 
 const Quote = styled.p`
   font-style: italic;
+  color: #ffffff;
+`;
+
+const StyledH2 = styled.h2`
+  color: #bbbbbb;
 `;
 
 const Testimonials = ({ testimonials }) => {
   return (
     <TestimonialWrapper id="Testimonials">
-      <h2>Testimonials</h2>
+      <StyledH2>Testimonials</StyledH2>
       <LayoutContainer>
         <Slider {...settings}>
           {testimonials &&
