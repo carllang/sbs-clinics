@@ -38,7 +38,7 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
         />
         <div className="page-content bottom-container">
           <Container>
-            <main>{children}</main>
+            <main style={{ minHeight: "900px" }}>{children}</main>
             <Footer
               siteTitle={`© ${new Date().getFullYear()} ${
                 data.site.siteMetadata.title

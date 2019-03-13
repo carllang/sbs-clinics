@@ -1,3 +1,6 @@
 .popupbox-wrapper {
-  max-height: 90vh;
+  max-width: 100vh;
+}
+.popupbox-content {
+  padding: 20px 35px 30px;
 }

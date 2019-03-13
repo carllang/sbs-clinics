@@ -38,17 +38,17 @@ const Sectors = ({ data }) => {
 
 export default Sectors;
 
-export const query = graphql`
-  query {
-    allWordpressPage {
-      edges {
-        node {
-          title
-          status
-          date
-          content
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     allWordpressPage {
+//       edges {
+//         node {
+//           title
+//           status
+//           date
+//           content
+//         }
+//       }
+//     }
+//   }
+// `;

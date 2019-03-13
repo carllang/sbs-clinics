@@ -38,17 +38,17 @@ const About = ({ data }) => {
 
 export default About;
 
-export const query = graphql`
-  query {
-    allWordpressPage {
-      edges {
-        node {
-          title
-          status
-          date
-          content
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     allWordpressPage {
+//       edges {
+//         node {
+//           title
+//           status
+//           date
+//           content
+//         }
+//       }
+//     }
+//   }
+// `;

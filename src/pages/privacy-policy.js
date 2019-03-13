@@ -8,7 +8,7 @@ const PrivacyPolicy = ({ data }) => {
     <Layout page="privacy-policy" headerTitle="Privacy Policy">
       <SEO title="Privacy Policy" />
       <LayoutContainer>
-        <h1
+        {/* <h1
           dangerouslySetInnerHTML={{
             __html: data.allWordpressPage.edges[0].node.title
           }}
@@ -17,7 +17,8 @@ const PrivacyPolicy = ({ data }) => {
           dangerouslySetInnerHTML={{
             __html: data.allWordpressPage.edges[0].node.content
           }}
-        />
+        /> */}
+        Privacy policy
       </LayoutContainer>
     </Layout>
   );
@@ -25,17 +26,17 @@ const PrivacyPolicy = ({ data }) => {
 
 export default PrivacyPolicy;
 
-export const query = graphql`
-  query {
-    allWordpressPage {
-      edges {
-        node {
-          title
-          status
-          date
-          content
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     allWordpressPage {
+//       edges {
+//         node {
+//           title
+//           status
+//           date
+//           content
+//         }
+//       }
+//     }
+//   }
+// `;
