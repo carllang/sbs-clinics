@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import styled from "styled-components";
-import { Header } from "src/components/Header";
-import Footer from "src/components/Footer";
-import { Logo } from "src/components/Atomic/Logo";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
+import { Header } from 'src/components/Header';
+import Footer from 'src/components/Footer';
+import { Logo } from 'src/components/Atomic/Logo';
 
-import "./layout.scss";
-import "./nav.css";
+import './layout.scss';
+import './nav.css';
 
 const Container = styled.div`
   text-align: justify;
@@ -38,7 +38,7 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
         />
         <div className="page-content bottom-container">
           <Container>
-            <main style={{ minHeight: "900px" }}>{children}</main>
+            <main style={{ minHeight: '900px' }}>{children}</main>
             <Footer
               siteTitle={`© ${new Date().getFullYear()} ${
                 data.site.siteMetadata.title
@@ -53,7 +53,7 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

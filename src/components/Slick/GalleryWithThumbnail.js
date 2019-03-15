@@ -1,57 +1,63 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-import { Image } from "src/components/Image";
+import React, { Component } from 'react';
+import Slider from 'react-slick';
+import { Image } from 'src/components/Image';
 
 class GalleryWithThumbnail extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       nav1: null,
-      nav2: null
-    }
+      nav2: null,
+    };
   }
 
   componentDidMount() {
     this.setState({
       nav1: this.slider1,
-      nav2: this.slider2
-    })
+      nav2: this.slider2,
+    });
   }
 
+  componentDidUpdate() {
+    const { gotoSlide } = this.props;
+    this.slider1.slickGoTo(gotoSlide);
+  }
+
+  renderImages = () => {
+    const { images } = this.props;
+    return images.map(image => <Image image={image.name} />);
+  };
+
   render() {
-    const { initialSlide } = this.props;
+    const { nav1, nav2 } = this.state;
+
     return (
-      <div>
-        <h2>Gallery</h2>
-        
+      <div className="GalleryWithThumbnail">
         <Slider
-          asNavFor={this.state.nav2}
-          ref={slider => (this.slider1 = slider)}
+          asNavFor={nav2}
+          ref={slider => {
+            this.slider1 = slider;
+          }}
           focusOnSelect
           fade
-          initialSlide={initialSlide || 0}
         >
-          <Image image="nastuh-abootalebi-284877-unsplash.jpg" />
-          <Image image="toa-heftiba-644507-unsplash.jpg" />
-          <Image image="daniel-frank-201417-unsplash.jpg" />
-          <Image image="georgie-cobbs-459520-unsplash.jpg" />
+          {this.renderImages()}
         </Slider>
-        
+
         <Slider
-          asNavFor={this.state.nav1}
-          ref={slider => (this.slider2 = slider)}
+          asNavFor={nav1}
+          ref={slider => {
+            this.slider2 = slider;
+          }}
           slidesToShow={4}
           swipeToSlide
           focusOnSelect
         >
-          <Image image="nastuh-abootalebi-284877-unsplash.jpg" />
-          <Image image="toa-heftiba-644507-unsplash.jpg" />
-          <Image image="daniel-frank-201417-unsplash.jpg"  />
-          <Image image="georgie-cobbs-459520-unsplash.jpg" />
+          {this.renderImages()}
         </Slider>
       </div>
-    )
+    );
   }
 }
 
-export { GalleryWithThumbnail }
+export { GalleryWithThumbnail };
