@@ -11,6 +11,7 @@ import './nav.css';
 
 const Container = styled.div`
   text-align: justify;
+  padding-top: 20px;
 `;
 
 const Layout = ({ children, page, headerTitle }, ...props) => (
@@ -36,7 +37,7 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
           page={page}
           headerTitle={headerTitle}
         />
-        <div className="page-content bottom-container">
+        <div className={`page-content bottom-container ${page}`}>
           <Container>
             <main style={{ minHeight: '900px' }}>{children}</main>
             <Footer

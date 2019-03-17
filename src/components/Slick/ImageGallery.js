@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-import styled from "styled-components";
-import { Image } from "src/components/Image";
+import React, { Component } from 'react';
+import Slider from 'react-slick';
+import styled from 'styled-components';
+import { Image } from 'src/components/Image';
 
 const SliderWrapper = styled.div`
   @media all and (max-width: 768px) {
@@ -15,7 +15,7 @@ const ItemWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 60vh;
+  height: 70vh;
   background-color: #000000;
   h2 {
     margin-top: 12vh;
@@ -55,9 +55,10 @@ class HeaderImageGallery extends Component {
       autoplay: true,
       autoplaySpeed: 5000,
       arrows: false,
-      fade: false
-    }
+      fade: false,
+    },
   };
+
   render() {
     const { settings } = this.state;
     const { images } = this.props;

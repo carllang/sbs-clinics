@@ -5,34 +5,34 @@ module.exports = {
     author: `Carl Lang`,
     menuLinks: [
       {
-        name: "Home",
-        link: "/"
+        name: 'Home',
+        link: '/',
       },
       {
-        name: "About",
-        link: "/about"
+        name: 'About',
+        link: '/about',
       },
       {
-        name: "Sectors",
-        link: "/sectors"
+        name: 'Sectors',
+        link: '/sectors',
       },
       {
-        name: "Services",
-        link: "/services"
+        name: 'Services',
+        link: '/services',
       },
       {
-        name: "News",
-        link: "/news"
+        name: 'News',
+        link: '/news',
       },
       {
-        name: "Case studies",
-        link: "/case-studies"
+        name: 'Case studies',
+        link: '/case-studies',
       },
       {
-        name: "Contact",
-        link: "/contact"
-      }
-    ]
+        name: 'Contact',
+        link: '/contact',
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -40,23 +40,23 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-news`,
-        path: `${__dirname}/src/markdown/news`
-      }
+        path: `${__dirname}/src/markdown/news`,
+      },
     },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
         useMozJpeg: false,
-        stripMetadata: true
-      }
+        stripMetadata: true,
+      },
     },
     {
       resolve: `gatsby-source-wordpress`,
@@ -67,8 +67,8 @@ module.exports = {
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
-        useACF: false
-      }
+        useACF: false,
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
@@ -77,23 +77,29 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography.js`
-      }
+        pathToConfigModule: `src/utils/typography.js`,
+      },
     },
-    "gatsby-plugin-root-import",
+    'gatsby-plugin-root-import',
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/images/favicon32.png"
-      }
+        logo: './src/images/favicon32.png',
+      },
     },
     `gatsby-transformer-remark`,
     {
-      resolve: "gatsby-plugin-page-transitions",
+      resolve: 'gatsby-plugin-page-transitions',
       options: {
-        transitionTime: 1000
-      }
-    }
-  ]
+        transitionTime: 1000,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        // Add any options here
+      },
+    },
+  ],
 };

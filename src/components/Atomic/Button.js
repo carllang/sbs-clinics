@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  background-image: linear-gradient(to bottom right, #000000, #666666);
+  background-color: #ff6600;
   border: none;
   display: inline;
   color: #ffffff;

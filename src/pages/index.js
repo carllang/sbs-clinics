@@ -42,11 +42,11 @@ class IndexPage extends React.Component {
               title="Home"
               keywords={[`construction`, `clinic`, `interior`]}
             />
-            <p />
             <h1 className="centered-text">
               Specialist Design and Build Contractors
             </h1>
-            <p className="centered-text">
+
+            <p className="centered-text" style={{ marginTop: '50px' }}>
               Welcome to {data.site.siteMetadata.title}
             </p>
             <p className="centered-text">

@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Nav from "src/components/Nav";
-import styled from "styled-components";
-import { ImageGallery } from "src/components/Slick";
-import { Image } from "src/components/Image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Nav from 'src/components/Nav';
+import styled from 'styled-components';
+import { ImageGallery } from 'src/components/Slick';
+import { Image } from 'src/components/Image';
 
 const TopHeaderContainer = styled.div`
   position: absolute;
@@ -29,7 +29,7 @@ const ItemWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 60vh;
+  height: 40vh;
   background-color: #000000;
   h2 {
     margin-top: 12vh;
@@ -63,24 +63,24 @@ const TitleWrapper = styled.h2`
 
 const renderHeaderImage = page => {
   switch (page) {
-    case "about":
-      return "nastuh-abootalebi-284879-unsplash";
-    case "sectors":
-      return "martha-dominguez-de-gouveia-572635-unsplash.jpg";
-    case "services":
-      return "nastuh-abootalebi-284883-unsplash.jpg";
-    case "news":
-      return "apartment-ceiling-chair-263201.jpg";
-    case "case-studies":
-      return "toa-heftiba-644507-unsplash.jpg";
-    case "contact":
-      return "marko-pekic-145777-unsplash.jpg";
+    case 'about':
+      return 'nastuh-abootalebi-284879-unsplash';
+    case 'sectors':
+      return 'martha-dominguez-de-gouveia-572635-unsplash.jpg';
+    case 'services':
+      return 'nastuh-abootalebi-284883-unsplash.jpg';
+    case 'news':
+      return 'apartment-ceiling-chair-263201.jpg';
+    case 'case-studies':
+      return 'toa-heftiba-644507-unsplash.jpg';
+    case 'contact':
+      return 'marko-pekic-145777-unsplash.jpg';
     default:
-      "nastuh-abootalebi-284877-unsplash.jpg";
+      'nastuh-abootalebi-284877-unsplash.jpg';
   }
 };
 
-const Header = ({ menuLinks, page, headerTitle = "" }) => {
+const Header = ({ menuLinks, page, headerTitle = '' }) => {
   return (
     <>
       <input type="checkbox" id="drawer-toggle" name="drawer-toggle" />
@@ -88,26 +88,26 @@ const Header = ({ menuLinks, page, headerTitle = "" }) => {
       <TopHeaderContainer id="drawer">
         <Nav menuLinks={menuLinks} colour="white" />
       </TopHeaderContainer>
-      {page === "home" ? (
-        <div className="page-content">
+      {page === 'home' ? (
+        <div className="page-content" style={{ marginTop: '-100px' }}>
           <ImageGallery
             images={[
               {
-                src: "nastuh-abootalebi-284877-unsplash.jpg",
-                title: "Smart Building Solutions"
+                src: 'nastuh-abootalebi-284877-unsplash.jpg',
+                title: 'Smart Building Solutions',
               },
               {
-                src: "samuel-zeller-110931-unsplash.jpg",
-                title: "Dedicated Design Teams"
+                src: 'samuel-zeller-110931-unsplash.jpg',
+                title: 'Dedicated Design Teams',
               },
               {
-                src: "christopher-burns-368617-unsplash.jpg",
-                title: "Expert Craftsmen"
+                src: 'christopher-burns-368617-unsplash.jpg',
+                title: 'Expert Craftsmen',
               },
               {
-                src: "daniel-frank-201417-unsplash.jpg",
-                title: "Friendly Consultation"
-              }
+                src: 'daniel-frank-201417-unsplash.jpg',
+                title: 'Friendly Consultation',
+              },
             ]}
           />
         </div>
@@ -128,11 +128,11 @@ const Header = ({ menuLinks, page, headerTitle = "" }) => {
 };
 
 Header.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 };
 
 Header.defaultProps = {
-  siteTitle: ``
+  siteTitle: ``,
 };
 
 export { Header };
