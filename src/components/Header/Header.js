@@ -29,7 +29,7 @@ const ItemWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 40vh;
+  height: 85vh;
   background-color: #000000;
   h2 {
     margin-top: 12vh;
@@ -70,13 +70,13 @@ const renderHeaderImage = page => {
     case 'services':
       return 'nastuh-abootalebi-284883-unsplash.jpg';
     case 'news':
-      return 'apartment-ceiling-chair-263201.jpg';
+      return 'worapong-kaewtong-553394-unsplash.jpg';
     case 'case-studies':
       return 'toa-heftiba-644507-unsplash.jpg';
     case 'contact':
       return 'marko-pekic-145777-unsplash.jpg';
     default:
-      'nastuh-abootalebi-284877-unsplash.jpg';
+      return 'nastuh-abootalebi-284877-unsplash.jpg';
   }
 };
 
@@ -112,7 +112,7 @@ const Header = ({ menuLinks, page, headerTitle = '' }) => {
           />
         </div>
       ) : (
-        <ItemWrapper className="page-content">
+        <ItemWrapper className="page-content" style={{ marginTop: '-230px' }}>
           <TitleWrapper>{headerTitle}</TitleWrapper>
           <ImageWrapper>
             <Image

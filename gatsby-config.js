@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `SBS Clinics`,
+    title: `SBS`,
     description: `Description`,
     author: `Carl Lang`,
     menuLinks: [
@@ -46,8 +46,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-news`,
-        path: `${__dirname}/src/markdown/news`,
+        name: `markdown`,
+        path: `${__dirname}/src/markdown/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -56,18 +56,6 @@ module.exports = {
       options: {
         useMozJpeg: false,
         stripMetadata: true,
-      },
-    },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        // your wordpress source
-        baseUrl: `localhost`,
-        protocol: `http`,
-        // is it hosted on wordpress.com, or self-hosted?
-        hostingWPCOM: false,
-        // does your site use the Advanced Custom Fields Plugin?
-        useACF: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

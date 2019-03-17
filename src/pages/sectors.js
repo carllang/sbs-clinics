@@ -1,7 +1,7 @@
-import React from "react";
-import Layout from "src/components/Layout";
-import SEO from "src/components/seo";
-import { LayoutContainer } from "src/components/Layout/LayoutContainer";
+import React from 'react';
+import Layout from 'src/components/Layout';
+import SEO from 'src/components/seo';
+import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
 
 const Sectors = ({ data }) => {
   return (
