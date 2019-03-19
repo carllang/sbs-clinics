@@ -5,13 +5,19 @@ import styled from 'styled-components';
 import { Header } from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import { Logo } from 'src/components/Atomic/Logo';
-
+import QuoteButton from 'src/components/QuoteButton';
 import './layout.scss';
 import './nav.css';
 
 const Container = styled.div`
   text-align: justify;
   padding-top: 20px;
+`;
+
+const QuoteButtonContainer = styled.div`
+  position: absolute;
+  top: 0vh;
+  right: 10px;
 `;
 
 const Layout = ({ children, page, headerTitle }, ...props) => (
@@ -38,6 +44,10 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
           headerTitle={headerTitle}
         />
         <div className={`page-content bottom-container ${page}`}>
+          <QuoteButtonContainer>
+            <QuoteButton />
+          </QuoteButtonContainer>
+
           <Container>
             <main style={{ minHeight: '900px' }}>{children}</main>
             <Footer

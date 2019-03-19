@@ -18,7 +18,7 @@ const ItemWrapper = styled.div`
   height: 70vh;
   background-color: #000000;
   h2 {
-    margin-top: 12vh;
+    margin-top: 20vh;
     margin-bottom: 0;
   }
   @media all and (max-width: 768px) {

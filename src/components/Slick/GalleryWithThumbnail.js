@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
+import styled from 'styled-components';
 import { Image } from 'src/components/Image';
+import posed from 'react-pose';
+
+const StyledImage = styled.div`
+  cursor: pointer;
+`;
+
+const Box = posed.div({
+  hoverable: true,
+  init: {
+    scale: 1,
+  },
+  hover: {
+    scale: 1.05,
+  },
+});
 
 class GalleryWithThumbnail extends Component {
   constructor(props) {
@@ -25,7 +41,16 @@ class GalleryWithThumbnail extends Component {
 
   renderImages = () => {
     const { images } = this.props;
-    return images.map(image => <Image image={image.name} />);
+    return images.map((image, key) => <Image key={key} image={image.name} />);
+  };
+
+  renderThumbImages = () => {
+    const { images } = this.props;
+    return images.map((image, key) => (
+      <Box className="box" key={key}>
+        <Image image={image.name} style={{ cursor: 'pointer' }} />
+      </Box>
+    ));
   };
 
   render() {
@@ -53,7 +78,7 @@ class GalleryWithThumbnail extends Component {
           swipeToSlide
           focusOnSelect
         >
-          {this.renderImages()}
+          {this.renderThumbImages()}
         </Slider>
       </div>
     );

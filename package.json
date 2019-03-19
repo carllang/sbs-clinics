@@ -30,6 +30,7 @@
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-popupbox": "^2.0.8",
+    "react-pose": "^4.0.8",
     "react-slick": "0.23.1",
     "react-typography": "^0.16.18",
     "slick-carousel": "^1.8.1",

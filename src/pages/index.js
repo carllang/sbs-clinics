@@ -1,6 +1,6 @@
 import React from 'react';
 import PageTransition from 'gatsby-plugin-page-transitions';
-
+import styled from 'styled-components';
 import Layout from 'src/components/Layout';
 import SEO from 'src/components/seo';
 import Testimonials from 'src/components/Testimonials';
@@ -25,6 +25,10 @@ const homePageGallery = [
   },
 ];
 
+const TestimonialWrapper = styled.section`
+  background-image: ${props => props.image};
+`;
+
 class IndexPage extends React.Component {
   onGalleryImageClick = id => {
     PopupboxManager.open({
@@ -34,6 +38,7 @@ class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props;
+
     return (
       <PageTransition>
         <Layout page="home">
@@ -76,7 +81,7 @@ class IndexPage extends React.Component {
               onGalleryImageClick={this.onGalleryImageClick}
             />
           </LayoutContainer>
-          <section>
+          <TestimonialWrapper image={data.images.edges[0].node.relativePath}>
             <Testimonials
               testimonials={[
                 {
@@ -97,7 +102,7 @@ class IndexPage extends React.Component {
                 },
               ]}
             />
-          </section>
+          </TestimonialWrapper>
         </Layout>
       </PageTransition>
     );
@@ -111,6 +116,16 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    images: allFile(
+      filter: { name: { regex: "/webtreats_wood-pattern8-1024/" } }
+    ) {
+      edges {
+        node {
+          relativePath
+          name
+        }
       }
     }
   }
