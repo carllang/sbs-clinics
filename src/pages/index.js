@@ -6,7 +6,7 @@ import SEO from 'src/components/seo';
 import Testimonials from 'src/components/Testimonials';
 import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
 import { Lightbox } from 'src/components/Lightbox';
-import { GalleryWithThumbnail } from 'src/components/Slick/GalleryWithThumbnail';
+import { GalleryWithThumbnail } from 'src/components/ImageGallery/GalleryWithThumbnail';
 import Gallery from 'src/components/Gallery';
 import { PopupboxManager } from 'react-popupbox';
 

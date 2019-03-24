@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Nav from 'src/components/Nav';
 import styled from 'styled-components';
-import { ImageGallery } from 'src/components/Slick';
+import ImageGallery from 'src/components/ImageGallery';
 import { Image } from 'src/components/Image';
 
 const TopHeaderContainer = styled.div`
@@ -10,7 +10,6 @@ const TopHeaderContainer = styled.div`
   top: 0px;
   right: 0px;
   z-index: 9;
-
   opacity: 0.6;
   width: 100%;
   border-bottom: 1px solid #cccccc;
@@ -24,12 +23,9 @@ const TopHeaderContainer = styled.div`
 `;
 
 const ItemWrapper = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  height: 85vh;
+  height: 18em;
+  margin: 0 auto;
+  overflow: hidden;
   background-color: #000000;
   h2 {
     margin-top: 12vh;
@@ -41,21 +37,37 @@ const ItemWrapper = styled.div`
 `;
 
 const ImageWrapper = styled.div`
+  position: relative;
+  max-height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.2;
+  @media (min-width: 800px) {
+    top: 50%;
+    left: 0;
+    max-height: none;
+    width: 100%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+  }
+`;
+
+const TitleContainer = styled.div`
   position: absolute;
-  display: block;
   top: 0px;
-  left: 0px;
   width: 100%;
-  opacity: 0.6;
+  z-index: 1;
 `;
 
 const TitleWrapper = styled.h2`
   z-index: 10;
   color: #ffffff;
   font-size: 4em;
-  border-bottom: 2px solid #ffffff;
-  display: inline-block;
   line-height: 1.85;
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   @media all and (max-width: 768px) {
     font-size: 3em;
   }
@@ -89,7 +101,7 @@ const Header = ({ menuLinks, page, headerTitle = '' }) => {
         <Nav menuLinks={menuLinks} colour="white" />
       </TopHeaderContainer>
       {page === 'home' ? (
-        <div className="page-content" style={{ marginTop: '-100px' }}>
+        <div className="page-content">
           <ImageGallery
             images={[
               {
@@ -112,8 +124,11 @@ const Header = ({ menuLinks, page, headerTitle = '' }) => {
           />
         </div>
       ) : (
-        <ItemWrapper className="page-content" style={{ marginTop: '-230px' }}>
-          <TitleWrapper>{headerTitle}</TitleWrapper>
+        <ItemWrapper className="page-content">
+          <TitleContainer>
+            <TitleWrapper>{headerTitle}</TitleWrapper>
+          </TitleContainer>
+
           <ImageWrapper>
             <Image
               image={renderHeaderImage(page)}
