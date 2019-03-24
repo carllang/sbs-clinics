@@ -13,7 +13,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import TextField from '@material-ui/core/TextField';
 
 window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
-const StyledForm = styled.form`
+const StyledForm = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,7 +56,7 @@ const IconWrapper = styled.div`
   margin-right: 10px;
 `;
 
-class Contact extends React.Component {
+class RequestAQuote extends React.Component {
   state = {
     emailSent: false,
   };
@@ -93,7 +93,7 @@ class Contact extends React.Component {
             <section style={{ width: '100%', paddingRight: '20px' }}>
               {!emailSent ? (
                 [
-                  <div style={{ display: 'flex' }}>
+                  <div style={{ display: 'flex' }} key={0}>
                     <StyledForm autoComplete="off">
                       <TextFieldWrapper>
                         <IconWrapper>
@@ -160,6 +160,7 @@ class Contact extends React.Component {
                       minHeight: '30px',
                       margin: '20px 0 0 34px',
                     }}
+                    key={1}
                   >
                     Send request
                     <SendIcon style={{ marginLeft: '10px' }} />
@@ -176,4 +177,4 @@ class Contact extends React.Component {
   }
 }
 
-export default withStyles(styles)(Contact);
+export default withStyles(styles)(RequestAQuote);

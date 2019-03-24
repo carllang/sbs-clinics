@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Ul = styled.ul`
   margin-bottom: 0px;
@@ -21,7 +21,7 @@ const Li = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-  color: ${props => (props.color === "white" ? "#ffffff" : "#000000")};
+  color: ${props => (props.color === 'white' ? '#ffffff' : '#000000')};
   text-decoration: none;
   &.active-link {
     font-weight: bold;
@@ -36,7 +36,7 @@ const Nav = ({ menuLinks, colour }) => {
       <nav>
         <Ul>
           {menuLinks.map(link => (
-            <Li key={link.name} style={{ listStyleType: "none" }}>
+            <Li key={link.name} style={{ listStyleType: 'none' }}>
               <StyledLink
                 to={link.link}
                 activeClassName="active-link"
