@@ -49,6 +49,7 @@ const styles = {
 const TextFieldWrapper = styled.div`
   display: flex;
   align-items: baseline;
+  width: 100%;
 `;
 
 const IconWrapper = styled.div`
@@ -141,7 +142,7 @@ class RequestAQuote extends React.Component {
                         id="input-with-icon-grid"
                         label="Job details"
                         multiline
-                        rows={1}
+                        rows={8}
                         rowsMax={10}
                         fullWidth
                         className={classes.root}
