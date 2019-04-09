@@ -12,7 +12,7 @@ import MessageIcon from '@material-ui/icons/Message';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import TextField from '@material-ui/core/TextField';
 
-window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
+// window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
 const StyledForm = styled.div`
   display: flex;
   flex-direction: column;
@@ -102,7 +102,7 @@ class RequestAQuote extends React.Component {
                         </IconWrapper>
                         <TextField
                           id="input-with-icon-grid"
-                          label="Your full name"
+                          label="Name"
                           fullWidth
                           className={classes.root}
                           variant="filled"
@@ -114,7 +114,7 @@ class RequestAQuote extends React.Component {
                         </IconWrapper>
                         <TextField
                           id="input-with-icon-grid"
-                          label="Contact email"
+                          label="Email"
                           fullWidth
                           className={classes.root}
                           variant="filled"
@@ -127,7 +127,7 @@ class RequestAQuote extends React.Component {
                         </IconWrapper>
                         <TextField
                           id="input-with-icon-grid"
-                          label="Phone number"
+                          label="Phone"
                           fullWidth
                           className={classes.root}
                           variant="filled"

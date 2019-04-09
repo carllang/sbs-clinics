@@ -26,7 +26,7 @@ const StyledArticle = styled.article`
   }
 `;
 
-const Services = ({ data }) => {
+const Services = () => {
   return (
     <Layout page="services" headerTitle="Our Services">
       <SEO title="Services" />

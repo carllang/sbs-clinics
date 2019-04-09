@@ -11,8 +11,9 @@ import SubjectIcon from '@material-ui/icons/Subject';
 import MessageIcon from '@material-ui/icons/Message';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import TextField from '@material-ui/core/TextField';
+import axios from 'axios';
 
-window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
+// window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -60,15 +61,33 @@ class Contact extends React.Component {
     emailSent: false,
   };
 
-  onSubmit = () => {
+  onSubmit = e => {
+    const { fullName, email, subject, message } = this.state;
     e.preventDefault();
-    fetch({
-      url: 'localhost/email.php',
-    }).then(response => {
-      this.setState({
-        emailSent: true,
+    const payload = {
+      fullName,
+      email,
+      subject,
+      message,
+    };
+    axios
+      .post('http://localhost:8000/email.php', {
+        method: 'POST',
+
+        data: payload,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(response => {
+        this.setState({
+          emailSent: true,
+        });
       });
-    });
+  };
+
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {
@@ -98,10 +117,12 @@ class Contact extends React.Component {
                     </IconWrapper>
                     <TextField
                       id="input-with-icon-grid"
-                      label="Your full name"
+                      label="Name"
                       fullWidth
                       className={classes.root}
                       variant="filled"
+                      onChange={this.onChange}
+                      name="fullName"
                     />
                   </TextFieldWrapper>
                   <TextFieldWrapper>
@@ -110,10 +131,12 @@ class Contact extends React.Component {
                     </IconWrapper>
                     <TextField
                       id="input-with-icon-grid"
-                      label="Your email"
+                      label="Email"
                       fullWidth
                       className={classes.root}
                       variant="filled"
+                      onChange={this.onChange}
+                      name="email"
                     />
                   </TextFieldWrapper>
 
@@ -127,6 +150,8 @@ class Contact extends React.Component {
                       fullWidth
                       className={classes.root}
                       variant="filled"
+                      onChange={this.onChange}
+                      name="subject"
                     />
                   </TextFieldWrapper>
                   <TextFieldWrapper>
@@ -142,6 +167,8 @@ class Contact extends React.Component {
                       fullWidth
                       className={classes.root}
                       variant="filled"
+                      onChange={this.onChange}
+                      name="message"
                     />
                   </TextFieldWrapper>
 
@@ -156,6 +183,7 @@ class Contact extends React.Component {
                       minHeight: '30px',
                       margin: '20px 0 0 34px',
                     }}
+                    onClick={this.onSubmit}
                   >
                     Send
                     <SendIcon style={{ marginLeft: '10px' }} />

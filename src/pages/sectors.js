@@ -3,7 +3,7 @@ import Layout from 'src/components/Layout';
 import SEO from 'src/components/seo';
 import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
 
-const Sectors = ({ data }) => {
+const Sectors = () => {
   return (
     <Layout page="sectors" headerTitle="Sectors">
       <SEO title="Sectors" />
