@@ -13,7 +13,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import TextField from '@material-ui/core/TextField';
 
 // window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
-const StyledForm = styled.div`
+const StyledForm = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,12 +23,16 @@ const StyledForm = styled.div`
   input: focus, textarea: focus {
     outline: none;
   }
-  width: 50%;
+  width: 100%;
   margin-right: 20px;
   textarea {
     height: 200px;
     margin-bottom: 20px;
     width: 100%;
+  }
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    margin-right: 0px;
   }
 `;
 
@@ -57,6 +61,33 @@ const IconWrapper = styled.div`
   margin-right: 10px;
 `;
 
+const FormWrapper = styled.div`
+  display: flex;
+
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  width: 100%;
+  padding-right: 20px;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    padding-right: 0px;
+  }
+`;
+const FlexboxWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-left: -35px;
+  margin-top: 45px.;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    padding-right: 0px;
+    margin-left: 0px;
+  }
+`;
 class RequestAQuote extends React.Component {
   state = {
     emailSent: false,
@@ -78,23 +109,16 @@ class RequestAQuote extends React.Component {
     const { classes } = this.props;
     return (
       <Layout page="request-a-quote" headerTitle="Request a quote">
-        <SEO title="Contact Us" />
+        <SEO title="Request a quote" />
 
         <LayoutContainer>
           <h1>Send us your job request details</h1>
           <p>Please fill out this form, and we will get back to you.</p>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              marginLeft: '-35px',
-              marginTop: '45px',
-            }}
-          >
-            <section style={{ width: '100%', paddingRight: '20px' }}>
+          <FlexboxWrapper>
+            <ContentWrapper>
               {!emailSent ? (
                 [
-                  <div style={{ display: 'flex' }} key={0}>
+                  <FormWrapper key={0}>
                     <StyledForm autoComplete="off">
                       <TextFieldWrapper>
                         <IconWrapper>
@@ -149,7 +173,7 @@ class RequestAQuote extends React.Component {
                         variant="filled"
                       />
                     </TextFieldWrapper>
-                  </div>,
+                  </FormWrapper>,
                   <Button
                     variant="contained"
                     color="secondary"
@@ -170,8 +194,8 @@ class RequestAQuote extends React.Component {
               ) : (
                 <div>Request sent!</div>
               )}
-            </section>
-          </div>
+            </ContentWrapper>
+          </FlexboxWrapper>
         </LayoutContainer>
       </Layout>
     );

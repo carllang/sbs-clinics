@@ -33,7 +33,7 @@ const ImageWrapper = styled.div`
   max-height: 100%;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0.2;
+  opacity: 0.6;
   @media (min-width: 800px) {
     top: 50%;
     left: 0;

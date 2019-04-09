@@ -15,9 +15,13 @@ const Container = styled.div`
 `;
 
 const QuoteButtonContainer = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0vh;
   right: 10px;
+  z-index: 999;
+  @media only screen and (max-width: 480px) {
+    top: 24vh;
+  }
 `;
 
 const Layout = ({ children, page, headerTitle }, ...props) => (
@@ -44,9 +48,11 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
           headerTitle={headerTitle}
         />
         <div className={`page-content bottom-container ${page}`}>
-          <QuoteButtonContainer>
-            <QuoteButton />
-          </QuoteButtonContainer>
+          {page !== 'request-a-quote' ? (
+            <QuoteButtonContainer>
+              <QuoteButton />
+            </QuoteButtonContainer>
+          ) : null}
 
           <Container>
             <main style={{ minHeight: '900px' }}>{children}</main>

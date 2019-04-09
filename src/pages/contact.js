@@ -56,6 +56,27 @@ const IconWrapper = styled.div`
   margin-right: 10px;
 `;
 
+const ContentWrapper = styled.div`
+  width: 100%;
+  padding-right: 20px;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    padding-right: 0px;
+  }
+`;
+const FlexboxWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-left: -35px;
+  margin-top: 45px.;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    padding-right: 0px;
+    margin-left: 0px;
+    flex-direction: column;
+  }
+`;
+
 class Contact extends React.Component {
   state = {
     emailSent: false,
@@ -100,15 +121,8 @@ class Contact extends React.Component {
         <LayoutContainer>
           <h1>Get in touch</h1>
           <p>Please contact us using the form provided or call us.</p>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              marginLeft: '-35px',
-              marginTop: '45px',
-            }}
-          >
-            <section style={{ width: '100%', paddingRight: '20px' }}>
+          <FlexboxWrapper>
+            <ContentWrapper>
               {!emailSent ? (
                 <StyledForm autoComplete="off">
                   <TextFieldWrapper>
@@ -192,12 +206,12 @@ class Contact extends React.Component {
               ) : (
                 <div>Email sent!</div>
               )}
-            </section>
+            </ContentWrapper>
 
-            <section>
+            <section style={{ width: '100%' }}>
               <iframe
                 title="map"
-                width="560"
+                width="100%"
                 height="460"
                 frameBorder="0"
                 style={{ border: 0 }}
@@ -205,7 +219,7 @@ class Contact extends React.Component {
                 allowFullScreen
               />
             </section>
-          </div>
+          </FlexboxWrapper>
         </LayoutContainer>
       </Layout>
     );

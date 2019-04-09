@@ -12,7 +12,7 @@ export const LayoutContainer = styled.div`
     width: 720px;
   }
   @media only screen and (max-width: 479px) {
-    width: 300px;
+    width: 100%;
   }
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     width: 460px;
