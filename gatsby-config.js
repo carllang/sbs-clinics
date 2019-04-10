@@ -77,12 +77,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    {
-      resolve: 'gatsby-plugin-page-transitions',
-      options: {
-        transitionTime: 1000,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-page-transitions',
+    //   options: {
+    //     transitionTime: 1000,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {

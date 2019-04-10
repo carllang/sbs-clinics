@@ -14,7 +14,11 @@ export const LayoutContainer = styled.div`
   @media only screen and (max-width: 479px) {
     width: 100%;
   }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
-    width: 460px;
+  @media only screen and (min-width: 300px) and (max-width: 767px) {
+    width: 100%;
+    h1 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
   }
 `;

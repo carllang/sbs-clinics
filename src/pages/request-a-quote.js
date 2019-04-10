@@ -64,25 +64,20 @@ const IconWrapper = styled.div`
 const FormWrapper = styled.div`
   display: flex;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
 
 const ContentWrapper = styled.div`
   width: 100%;
-  padding-right: 20px;
-  @media only screen and (max-width: 480px) {
-    width: 100%;
-    padding-right: 0px;
-  }
 `;
 const FlexboxWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-left: -35px;
   margin-top: 45px.;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     width: 100%;
     padding-right: 0px;
     margin-left: 0px;

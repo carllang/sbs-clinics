@@ -51,7 +51,7 @@ class IndexPage extends React.Component {
               Specialist Design and Build Contractors
             </h1>
 
-            <p className="centered-text" style={{ marginTop: '50px' }}>
+            <p className="centered-text">
               Welcome to {data.site.siteMetadata.title}
             </p>
             <p className="centered-text">

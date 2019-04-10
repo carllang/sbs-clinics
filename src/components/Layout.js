@@ -20,7 +20,7 @@ const QuoteButtonContainer = styled.div`
   right: 10px;
   z-index: 999;
   @media only screen and (max-width: 480px) {
-    top: 24vh;
+    top: 33vh;
   }
 `;
 
