@@ -653,9 +653,10 @@ pre {
 
 .bottom-container.home {
   top: 60%;
+
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   html {
     font-size: 100%;
   }
@@ -663,6 +664,9 @@ pre {
     position: absolute;
     top: 200px;
     width: 100%;
+  }
+  .bottom-container.home {
+    top: 37%;
   }
 }
 

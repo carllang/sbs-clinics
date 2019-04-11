@@ -16,15 +16,14 @@ const ItemWrapper = styled.div`
   background-color: #000000;
   position: relative;
   h2 {
-    margin-top: 12vh;
+    margin-top: 27vh;
     margin-bottom: 0;
   }
   @media all and (max-width: 768px) {
     margin-top: 0px;
-  }
-  h2 {
-    margin-top: 27vh;
-    margin-bottom: 0;
+    h2 {
+      margin-top: 15vh;
+    }
   }
 `;
 
@@ -61,7 +60,7 @@ const TitleWrapper = styled.h2`
   justify-content: center;
   width: 100%;
   @media all and (max-width: 768px) {
-    font-size: 3em;
+    font-size: 1.5em;
   }
 `;
 

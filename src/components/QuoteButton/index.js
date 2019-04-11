@@ -15,7 +15,7 @@ const StyledButton = styled(Button)`
     min-width: 30px;
     min-height: 30px;
     font-size: 0.8em;
-    margin-top: 0px;
+    margin-top: 10px;
   }
 `;
 

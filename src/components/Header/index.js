@@ -10,7 +10,6 @@ const TopHeaderContainer = styled.div`
   top: 0px;
   right: 0px;
   z-index: 9;
-  opacity: 0.6;
   width: 100%;
   border-bottom: 1px solid #cccccc;
   color: #ffffff;
@@ -69,7 +68,7 @@ const TitleWrapper = styled.h2`
   justify-content: center;
   width: 100%;
   @media all and (max-width: 768px) {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 `;
 
@@ -97,6 +96,7 @@ const Header = ({ menuLinks, page, headerTitle = '' }) => {
     <>
       <input type="checkbox" id="drawer-toggle" name="drawer-toggle" />
       <label htmlFor="drawer-toggle" id="drawer-toggle-label" />
+
       <TopHeaderContainer id="drawer">
         <Nav menuLinks={menuLinks} colour="white" />
       </TopHeaderContainer>

@@ -14,13 +14,27 @@ const Container = styled.div`
   padding-top: 20px;
 `;
 
+const DetailsContainer = styled.div`
+  margin-right: 20px;
+  color: #ffffff;
+  margin-top: 25px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
+`;
 const QuoteButtonContainer = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0vh;
   right: 10px;
   z-index: 999;
   @media only screen and (max-width: 480px) {
-    top: 33vh;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
   }
 `;
 
@@ -41,12 +55,13 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
     `}
     render={data => (
       <>
-        <Logo className="page-content">SBS</Logo>
         <Header
           menuLinks={data.site.siteMetadata.menuLinks}
           page={page}
           headerTitle={headerTitle}
         />
+        <DetailsContainer>012345678 info@sbs-intex.co.uk</DetailsContainer>
+        <Logo className="logo">SBS</Logo>
         <div className={`page-content bottom-container ${page}`}>
           {page !== 'request-a-quote' ? (
             <QuoteButtonContainer>

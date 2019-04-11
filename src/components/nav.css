@@ -7,6 +7,12 @@
   justify-content: flex-end;
 }
 
+.logo{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
 @media all and (min-width: 767px) {
   #drawer ul {
     list-style-type: none;
@@ -132,6 +138,17 @@
 
   #drawer-toggle:checked ~ .page-content {
     margin-left: -300px;
+  }
+
+  .logo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  #drawer-toggle:checked ~ .logo {
+    margin-left: -300px;
+    position: relative;
   }
 
   #drawer li {
