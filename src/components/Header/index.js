@@ -11,9 +11,50 @@ const TopHeaderContainer = styled.div`
   right: 0px;
   z-index: 9;
   width: 100%;
-  border-bottom: 1px solid #cccccc;
-  color: #ffffff;
-  padding-top: 60px;
+  border-bottom: 4px solid;
+  color: #000000;
+  padding: 10px 0;
+
+  animation-name: flash_border;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @keyframes flash_border {
+    0% {
+      border-color: #bdbdbd;
+    }
+    50% {
+      border-color: #9e9e9e;
+    }
+    100% {
+      border-color: #bdbdbd;
+    }
+  }
+
+  @-webkit-keyframes flash_border {
+    0% {
+      border-color: #bdbdbd;
+    }
+    50% {
+      border-color: #9e9e9e;
+    }
+    100% {
+      border-color: #bdbdbd;
+    }
+  }
+
+  @-moz-keyframes flash_border {
+    0% {
+      border-color: #bdbdbd;
+    }
+    50% {
+      border-color: #9e9e9e;
+    }
+    100% {
+      border-color: #bdbdbd;
+    }
+  }
+
   @media all and (max-width: 768px) {
     opacity: 1;
     position: relative;
@@ -72,6 +113,8 @@ const TitleWrapper = styled.h2`
   }
 `;
 
+const Border = styled.div``;
+
 const renderHeaderImage = page => {
   switch (page) {
     case 'about':
@@ -98,7 +141,7 @@ const Header = ({ menuLinks, page, headerTitle = '' }) => {
       <label htmlFor="drawer-toggle" id="drawer-toggle-label" />
 
       <TopHeaderContainer id="drawer">
-        <Nav menuLinks={menuLinks} colour="white" />
+        <Nav menuLinks={menuLinks} />
       </TopHeaderContainer>
       {page === 'home' ? (
         <div className="page-content">

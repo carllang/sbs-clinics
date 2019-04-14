@@ -71,6 +71,11 @@ const FormWrapper = styled.div`
 
 const ContentWrapper = styled.div`
   width: 100%;
+  @media only screen and (max-width: 768px) {
+    button {
+      float: right;
+    }
+  }
 `;
 const FlexboxWrapper = styled.div`
   display: flex;

@@ -32,6 +32,10 @@ module.exports = {
         name: 'Contact',
         link: '/contact',
       },
+      {
+        name: 'Quote',
+        link: '/request-a-quote',
+      },
     ],
   },
   plugins: [

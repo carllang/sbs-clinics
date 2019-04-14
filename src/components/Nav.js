@@ -9,10 +9,10 @@ const Ul = styled.ul`
 const Li = styled.li`
   list-style-type: none;
   margin: 0px 20px 0 0;
-
+  font-family: 'Open Sans';
   a {
-    font-size: 1.3em;
-    color: #f7f7f7;
+    font-size: 1em;
+    color: #ffffff;
   }
 
   @media all and (min-width: 767px) {
@@ -21,12 +21,26 @@ const Li = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-  color: ${props => (props.color === 'white' ? '#ffffff' : '#000000')};
+  color: #ffffff;
   text-decoration: none;
+
   &.active-link {
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1em;
     color: #ffffff;
+    border-bottom: 4px solid #f50057;
+  }
+
+  &:before {
+    width: 100%;
+    height: 2px;
+    background: darken($bg, 10%);
+    transform: scaleX(0);
+    content: '';
+    transition: transform 0.5s ease;
+  }
+  &:hover:before {
+    transform: scaleX(1);
   }
 `;
 
@@ -41,6 +55,7 @@ const Nav = ({ menuLinks, colour }) => {
                 to={link.link}
                 activeClassName="active-link"
                 color={colour}
+                className="effect-1"
               >
                 {link.name}
               </StyledLink>

@@ -30,6 +30,14 @@ const StyledForm = styled.form`
     margin-bottom: 20px;
     width: 100%;
   }
+  @media only screen and (max-width: 768px) {
+    button {
+      float: right;
+      width: 250px;
+      margin-bottom: 20px;
+    }
+    display: block;
+  }
 `;
 
 const styles = {
@@ -62,6 +70,13 @@ const ContentWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
     padding-right: 0px;
+    button {
+      float: right;
+      margin-bottom: 20px;
+    }
+  }
+  button {
+    margin: 10px 0 20px 34px;
   }
 `;
 const FlexboxWrapper = styled.div`
@@ -191,11 +206,10 @@ class Contact extends React.Component {
                     color="secondary"
                     size="large"
                     style={{
-                      maxWidth: '250px',
+                      width: '250px',
                       maxHeight: '60px',
                       minWidth: '30px',
                       minHeight: '30px',
-                      margin: '20px 0 0 34px',
                     }}
                     onClick={this.onSubmit}
                   >

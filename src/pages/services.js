@@ -8,21 +8,32 @@ import styled from 'styled-components';
 const ImageCopySection = styled.section`
   display: flex;
   margin-bottom: 80px;
-  box-shadow: 1px 3px 10px #999999;
+  @media all and (max-width: 768px) {
+    display: block;
+    margin-bottom: 0px;
+  }
 `;
 const ImageContainer = styled.div`
-  width: 90%;
-
+  width: 80%;
+  padding: ${props =>
+    props.pos === 'left' ? '0px 20px 20px 0' : '0px 0px 20px 20px'};
   @media all and (max-width: 768px) {
     width: 100%;
     margin-bottom: 20px;
+    padding: 0px;
   }
 `;
 const StyledArticle = styled.article`
-  width: 100%;
-  padding: 20px 20px;
+  width: 80%;
+  padding: ${props =>
+    props.pos === 'left' ? '0px 20px 20px 0' : '0px 0px 20px 20px'};
+
   h1 {
     text-align: initial;
+  }
+  @media all and (max-width: 768px) {
+    width: 100%;
+    padding: 20px 0;
   }
 `;
 
@@ -34,7 +45,7 @@ const Services = () => {
         <h1>Services</h1>
 
         <ImageCopySection>
-          <StyledArticle>
+          <StyledArticle pos="left">
             <h1>Concept & Interior Design</h1>
             Welcome to Smart Building Solutions (SBS). We are a diverse and
             dynamic construction company specialising in bespoke tailor made
@@ -48,7 +59,7 @@ const Services = () => {
         </ImageCopySection>
 
         <ImageCopySection>
-          <ImageContainer>
+          <ImageContainer pos="left">
             <Image image="pacific.jpg" />
           </ImageContainer>
           <StyledArticle>
@@ -61,7 +72,7 @@ const Services = () => {
           </StyledArticle>
         </ImageCopySection>
         <ImageCopySection>
-          <StyledArticle>
+          <StyledArticle pos="left">
             <h1>Contract Administration</h1>
             Welcome to Smart Building Solutions (SBS). We are a diverse and
             dynamic construction company specialising in bespoke tailor made
@@ -74,7 +85,7 @@ const Services = () => {
           </ImageContainer>
         </ImageCopySection>
         <ImageCopySection>
-          <ImageContainer>
+          <ImageContainer pos="left">
             <Image image="daniel-frank-201417-unsplash.jpg" />
           </ImageContainer>
           <StyledArticle>

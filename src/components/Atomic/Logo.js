@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Image } from 'src/components/Image';
 
 const StyledLogo = styled.span`
-  font-size: 3em;
-  margin-left: 0.2em;
   z-index: 11;
-  color: #f7f7f7;
-  font-weight: bold;
+  width: 157px;
+  height: 100%;
   @media all and (max-width: 768px) {
     #drawer-toggle:checked ~ .page-content {
       position: relative;
@@ -15,7 +14,11 @@ const StyledLogo = styled.span`
 `;
 
 const Logo = props => {
-  return <StyledLogo {...props}>SBS</StyledLogo>;
+  return (
+    <StyledLogo {...props}>
+      <Image image="header.png" />
+    </StyledLogo>
+  );
 };
 
 export { Logo };

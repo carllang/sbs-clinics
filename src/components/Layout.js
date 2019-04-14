@@ -6,6 +6,7 @@ import { Header } from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import { Logo } from 'src/components/Atomic/Logo';
 import QuoteButton from 'src/components/QuoteButton';
+
 import './layout.scss';
 import './nav.css';
 
@@ -16,12 +17,14 @@ const Container = styled.div`
 
 const DetailsContainer = styled.div`
   margin-right: 20px;
-  color: #ffffff;
-  margin-top: 25px;
+  color: #000000;
+  margin-top: 10px;
   display: inline-block;
   position: absolute;
   top: 0px;
   right: 0px;
+  z-index: 9;
+  font-weight: bold;
   @media only screen and (max-width: 480px) {
     display: none;
   }
@@ -36,6 +39,10 @@ const QuoteButtonContainer = styled.div`
     display: flex;
     justify-content: flex-end;
   }
+`;
+
+const MainWrapper = styled.main`
+  background-color: #ffffff;
 `;
 
 const Layout = ({ children, page, headerTitle }, ...props) => (
@@ -60,8 +67,11 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
           page={page}
           headerTitle={headerTitle}
         />
-        <DetailsContainer>012345678 info@sbs-intex.co.uk</DetailsContainer>
-        <Logo className="logo">SBS</Logo>
+        {/* <DetailsContainer>
+          +44(0)207 438 2005 enquiries@sbs-intex.co.uk
+        </DetailsContainer> */}
+        <Logo className="logo" />
+
         <div className={`page-content bottom-container ${page}`}>
           {page !== 'request-a-quote' ? (
             <QuoteButtonContainer>
@@ -70,7 +80,7 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
           ) : null}
 
           <Container>
-            <main style={{ minHeight: '900px' }}>{children}</main>
+            <MainWrapper style={{ minHeight: '900px' }}>{children}</MainWrapper>
             <Footer
               siteTitle={`© ${new Date().getFullYear()} ${
                 data.site.siteMetadata.title
