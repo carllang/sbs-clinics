@@ -4,7 +4,7 @@ import Layout from 'src/components/Layout';
 import SEO from 'src/components/seo';
 import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
 import styled from 'styled-components';
-// import TizianoImage from './SBSImages/Tiziano';
+import TizianoImage from '../components/SBSImages/Tiziano/index.js';
 
 const ImageCopySection = styled.section`
   display: flex;
@@ -55,16 +55,13 @@ const Services = () => {
             expectations.
           </StyledArticle>
           <ImageContainer>
-            <Image
-              image="martha-dominguez-de-gouveia-572635-unsplash.jpg"
-              imageQuery="images"
-            />
+            <TizianoImage image="IMG_3185.JPG" imageQuery="images" />
           </ImageContainer>
         </ImageCopySection>
 
         <ImageCopySection>
           <ImageContainer pos="left">
-            <Image image="pacific.jpg" imageQuery="images" />
+            <TizianoImage image="IMG_3361.JPG" imageQuery="images" />
           </ImageContainer>
           <StyledArticle>
             <h1>Dedicated Construction & Implementation Services</h1>
@@ -85,18 +82,12 @@ const Services = () => {
             expectations.
           </StyledArticle>
           <ImageContainer>
-            <Image
-              image="apartment-ceiling-chair-263201.jpg"
-              imageQuery="images"
-            />
+            <TizianoImage image="IMG_3308.JPG" imageQuery="images" />
           </ImageContainer>
         </ImageCopySection>
         <ImageCopySection>
           <ImageContainer pos="left">
-            <Image
-              image="daniel-frank-201417-unsplash.jpg"
-              imageQuery="images"
-            />
+            <TizianoImage image="IMG_3567.JPG" imageQuery="images" />
           </ImageContainer>
           <StyledArticle>
             <h1>Planning & Advisory Service</h1>

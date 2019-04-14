@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Image } from 'src/components/Image';
 import posed from 'react-pose';
+import TizianoImage from '../SBSImages/Tiziano/index.js';
 
 const SectionHomeGallery = styled.section`
   display: flex;
@@ -42,7 +43,7 @@ class Gallery extends Component {
     return images.map((image, key) => (
       <ImageContainer key={key} onClick={() => onGalleryImageClick(key)}>
         <Box className="box">
-          <Image image={image.name} imageQuery="images" />
+          <TizianoImage image={image.name} style={{ width: '100%' }} />
         </Box>
       </ImageContainer>
     ));

@@ -25,11 +25,7 @@ const ImageContainer = styled.div`
 const renderImages = images => {
   return images.map((image, key) => (
     <ImageContainer key={key} onClick={() => {}}>
-      <TizianoImage
-        image={image}
-        imageQuery="images"
-        style={{ width: '100%' }}
-      />
+      <TizianoImage image={image.name} style={{ width: '100%' }} />
     </ImageContainer>
   ));
 };

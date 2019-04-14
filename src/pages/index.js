@@ -12,16 +12,16 @@ import { PopupboxManager } from 'react-popupbox';
 
 const homePageGallery = [
   {
-    name: 'nastuh-abootalebi-284877-unsplash.jpg',
+    name: 'IMG_3207.JPG',
   },
   {
-    name: 'toa-heftiba-644507-unsplash.jpg',
+    name: 'IMG_3231.JPG',
   },
   {
-    name: 'daniel-frank-201417-unsplash.jpg',
+    name: 'IMG_3308.JPG',
   },
   {
-    name: 'georgie-cobbs-459520-unsplash.jpg',
+    name: 'IMG_3192.JPG',
   },
 ];
 

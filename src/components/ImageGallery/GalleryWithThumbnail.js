@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 import { Image } from 'src/components/Image';
 import posed from 'react-pose';
+import TizianoImage from '../SBSImages/Tiziano/index.js';
 
 const StyledImage = styled.div`
   cursor: pointer;
@@ -41,14 +42,16 @@ class GalleryWithThumbnail extends Component {
 
   renderImages = () => {
     const { images } = this.props;
-    return images.map((image, key) => <Image key={key} image={image.name} />);
+    return images.map((image, key) => (
+      <TizianoImage key={key} image={image.name} />
+    ));
   };
 
   renderThumbImages = () => {
     const { images } = this.props;
     return images.map((image, key) => (
       <Box className="box" key={key}>
-        <Image
+        <TizianoImage
           image={image.name}
           style={{ cursor: 'pointer' }}
           imageQuery="images"

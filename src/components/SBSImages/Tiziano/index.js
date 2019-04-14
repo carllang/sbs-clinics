@@ -24,8 +24,9 @@ const TizianoImage = props => (
       }
     `}
     render={data => {
+      console.log(props);
       const image = data.sbsImages.edges.find(n => {
-        return n.node.relativePath.includes(props.image.image);
+        return n.node.relativePath.includes(props.image);
       });
       if (!image) {
         return null;
