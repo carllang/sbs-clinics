@@ -28,7 +28,7 @@ const StyledLink = styled(Link)`
     font-weight: bold;
     font-size: 1em;
     color: #ffffff;
-    border-bottom: 4px solid #f50057;
+    border-bottom: 4px solid #29b6f6;
   }
 
   &:before {
