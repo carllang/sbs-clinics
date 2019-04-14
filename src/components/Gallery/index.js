@@ -42,7 +42,7 @@ class Gallery extends Component {
     return images.map((image, key) => (
       <ImageContainer key={key} onClick={() => onGalleryImageClick(key)}>
         <Box className="box">
-          <Image image={image.name} />
+          <Image image={image.name} imageQuery="images" />
         </Box>
       </ImageContainer>
     ));

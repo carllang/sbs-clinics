@@ -1,0 +1,56 @@
+{
+    "section": {
+        "dental": {
+            "name": "Tiziano Case Study",
+            "images": [
+                {
+                    "image": "IMG_3185.JPG"
+                },
+                {
+                    "image": "IMG_3192.JPG"
+                },
+                {
+                    "image": "IMG_3201.JPG"
+                },
+                {
+                    "image": "IMG_3207.JPG"
+                },
+                {
+                    "image": "IMG_3222.JPG"
+                },
+                {
+                    "image": "IMG_3231.JPG"
+                },
+                {
+                    "image": "IMG_3237.JPG"
+                }, 
+                {
+                    "image": "IMG_3255.JPG"
+                },
+                {
+                    "image": "IMG_3272.JPG"
+                },
+                {
+                    "image": "IMG_3281.JPG"
+                },
+                {
+                    "image": "IMG_3299.JPG"
+                },
+                {
+                    "image": "IMG_3308.JPG"
+                },
+                {
+                    "image": "IMG_3317.JPG"
+                },
+                {
+                    "image": "IMG_3323.JPG"
+                }
+                ,
+                {
+                    "image": "IMG_3361.JPG"
+                }
+
+            ]
+        }
+    }
+}

@@ -177,6 +177,7 @@ const Header = ({ menuLinks, page, headerTitle = '' }) => {
               image={renderHeaderImage(page)}
               className="header-image"
               title={headerTitle}
+              imageQuery="images"
             />
           </ImageWrapper>
         </ItemWrapper>

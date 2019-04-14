@@ -93,7 +93,11 @@ class ImageGallery extends Component {
                     <TitleWrapper>{image.title}</TitleWrapper>
                   </TitleContainer>
                   <ImageWrapper>
-                    <Image image={image.src} title={image.title} />
+                    <Image
+                      image={image.src}
+                      title={image.title}
+                      imageQuery="images"
+                    />
                   </ImageWrapper>
                 </ItemWrapper>
               );

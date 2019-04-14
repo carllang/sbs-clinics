@@ -16,7 +16,7 @@ const StyledLogo = styled.span`
 const Logo = props => {
   return (
     <StyledLogo {...props}>
-      <Image image="header.png" />
+      <Image image="header.png" imageQuery="images" />
     </StyledLogo>
   );
 };

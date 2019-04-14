@@ -48,7 +48,11 @@ class GalleryWithThumbnail extends Component {
     const { images } = this.props;
     return images.map((image, key) => (
       <Box className="box" key={key}>
-        <Image image={image.name} style={{ cursor: 'pointer' }} />
+        <Image
+          image={image.name}
+          style={{ cursor: 'pointer' }}
+          imageQuery="images"
+        />
       </Box>
     ));
   };
