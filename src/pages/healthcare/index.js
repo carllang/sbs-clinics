@@ -118,15 +118,25 @@ const HealthCare = ({ data }) => {
             <h1>Case study</h1>
             Read more about our case study of the work done at Tiziano
           </StyledArticle>
-          <ImageContainer>
+          <div style={{ width: '100%' }}>
             <Link to="/case-study/healthcare/tiziano">
-              <Img
-                sizes={data.healhcareImages.edges[8].node.childImageSharp.sizes}
-                fadeIn
-                style={{ width: '100%' }}
-              />
+              <figure className="effect-sarah">
+                <div className="image">
+                  <Img
+                    sizes={
+                      data.healhcareImages.edges[0].node.childImageSharp.sizes
+                    }
+                    fadeIn
+                    style={{ width: '100%' }}
+                  />
+                </div>
+                <figcaption>
+                  <h2>Tiziano</h2>
+                  <p>Click here to see our approach to this bespoke build</p>
+                </figcaption>
+              </figure>
             </Link>
-          </ImageContainer>
+          </div>
         </ImageCopySection>
       </LayoutContainer>
     </Layout>

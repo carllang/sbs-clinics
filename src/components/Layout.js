@@ -9,6 +9,7 @@ import QuoteButton from 'src/components/QuoteButton';
 
 import './layout.scss';
 import './nav.css';
+import './effect.css';
 
 const Container = styled.div`
   text-align: justify;
