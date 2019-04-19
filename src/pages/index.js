@@ -10,29 +10,15 @@ import { GalleryWithThumbnail } from 'src/components/ImageGallery/GalleryWithThu
 import Gallery from 'src/components/Home/Gallery';
 import { PopupboxManager } from 'react-popupbox';
 
-const homePageGallery = [
-  {
-    name: 'IMG_3207.JPG',
-  },
-  {
-    name: 'IMG_3231.JPG',
-  },
-  {
-    name: 'IMG_3308.JPG',
-  },
-  {
-    name: 'IMG_3192.JPG',
-  },
-];
-
 const TestimonialWrapper = styled.section`
   background-image: ${props => props.image};
 `;
 
 class IndexPage extends React.Component {
   onGalleryImageClick = id => {
+    const { data } = this.props;
     PopupboxManager.open({
-      content: <GalleryWithThumbnail images={homePageGallery} gotoSlide={id} />,
+      content: <GalleryWithThumbnail images={data.sbsImages} gotoSlide={id} />,
     });
   };
 

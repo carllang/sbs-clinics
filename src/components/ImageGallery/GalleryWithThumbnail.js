@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import SBSImage from '../SBSImages/index.js';
+import Img from 'gatsby-image';
 
 class GalleryWithThumbnail extends Component {
   constructor(props) {
@@ -25,20 +25,32 @@ class GalleryWithThumbnail extends Component {
 
   renderImages = () => {
     const { images } = this.props;
-    return images.map((image, key) => (
-      <SBSImage key={key} image={image.name} />
-    ));
+    return images.edges.map((n, key) => {
+      return (
+        <Img
+          image={n.node.relativePath}
+          sizes={n.node.childImageSharp.sizes}
+          fadeIn
+          style={{ width: '100%' }}
+          key={key}
+        />
+      );
+    });
   };
 
   renderThumbImages = () => {
     const { images } = this.props;
-    return images.map((image, key) => (
-      <SBSImage
-        image={image.name}
-        style={{ cursor: 'pointer' }}
-        imageQuery="images"
-      />
-    ));
+    return images.edges.map((n, key) => {
+      return (
+        <Img
+          image={n.node.relativePath}
+          sizes={n.node.childImageSharp.sizes}
+          fadeIn
+          style={{ width: '100%' }}
+          key={key}
+        />
+      );
+    });
   };
 
   render() {

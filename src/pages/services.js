@@ -55,13 +55,13 @@ const Services = () => {
             expectations.
           </StyledArticle>
           <ImageContainer>
-            <SBSImage image="IMG_3185.JPG" imageQuery="images" />
+            <SBSImage image="IMG_3185.JPG" />
           </ImageContainer>
         </ImageCopySection>
 
         <ImageCopySection>
           <ImageContainer pos="left">
-            <SBSImage image="IMG_3361.JPG" imageQuery="images" />
+            <SBSImage image="IMG_3361.JPG" />
           </ImageContainer>
           <StyledArticle>
             <h1>Dedicated Construction & Implementation Services</h1>
@@ -82,12 +82,12 @@ const Services = () => {
             expectations.
           </StyledArticle>
           <ImageContainer>
-            <SBSImage image="IMG_3308.JPG" imageQuery="images" />
+            <SBSImage image="IMG_3308.JPG" />
           </ImageContainer>
         </ImageCopySection>
         <ImageCopySection>
           <ImageContainer pos="left">
-            <SBSImage image="IMG_3567.JPG" imageQuery="images" />
+            <SBSImage image="IMG_3567.JPG" />
           </ImageContainer>
           <StyledArticle>
             <h1>Planning & Advisory Service</h1>

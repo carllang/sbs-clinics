@@ -50,6 +50,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `casestudies`,
+        path: `${__dirname}/src/sbsImages/case-studies`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `healthcareTiziano`,
         path: `${__dirname}/src/sbsImages/healthcare/Tiziano`,
       },

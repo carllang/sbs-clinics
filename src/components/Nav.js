@@ -49,18 +49,35 @@ const Nav = ({ menuLinks, colour }) => {
     <>
       <nav>
         <Ul>
-          {menuLinks.map(link => (
-            <Li key={link.name} style={{ listStyleType: 'none' }}>
-              <StyledLink
-                to={link.link}
-                activeClassName="active-link"
-                color={colour}
-                className="effect-1"
-              >
-                {link.name}
-              </StyledLink>
-            </Li>
-          ))}
+          {menuLinks.map(link => {
+            let hoverMenu = null;
+            if (link.link === '/sectors') {
+              hoverMenu = 'hoverMenu';
+            }
+
+            return (
+              <Li key={link.name} style={{ listStyleType: 'none' }}>
+                <StyledLink
+                  to={link.link}
+                  activeClassName="active-link"
+                  color={colour}
+                  className={`effect-1 ${hoverMenu}`}
+                >
+                  {link.name}
+                </StyledLink>
+                {hoverMenu && (
+                  <div className="dropdown-content">
+                    <Link to="/healthcare" className="effect-1">
+                      Healthcare
+                    </Link>
+                    <Link to="/residential" className="effect-1">
+                      Residential
+                    </Link>
+                  </div>
+                )}
+              </Li>
+            );
+          })}
         </Ul>
       </nav>
     </>

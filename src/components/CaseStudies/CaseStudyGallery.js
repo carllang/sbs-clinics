@@ -13,7 +13,7 @@ const SectionHomeGallery = styled.section`
 `;
 
 const ImageContainer = styled.div`
-  width: 285px;
+  width: 300px;
   padding: 10px;
   flex-shrink: 1;
   cursor: pointer;
@@ -24,13 +24,13 @@ const ImageContainer = styled.div`
   }
 `;
 
-class Gallery extends Component {
+class CaseStudyGallery extends Component {
   renderGallery = () => {
-    const { onGalleryImageClick, images } = this.props;
+    const { images } = this.props;
 
     return images.edges.map((n, key) => {
       return (
-        <ImageContainer key={key} onClick={() => onGalleryImageClick(key)}>
+        <ImageContainer key={key} onClick={() => {}}>
           <Img
             image={n.node.relativePath}
             sizes={n.node.childImageSharp.sizes}
@@ -47,4 +47,4 @@ class Gallery extends Component {
   }
 }
 
-export default Gallery;
+export default CaseStudyGallery;
