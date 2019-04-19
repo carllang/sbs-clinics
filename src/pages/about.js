@@ -37,18 +37,3 @@ const About = () => {
 };
 
 export default About;
-
-// export const query = graphql`
-//   query {
-//     allWordpressPage {
-//       edges {
-//         node {
-//           title
-//           status
-//           date
-//           content
-//         }
-//       }
-//     }
-//   }
-// `;

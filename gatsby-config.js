@@ -50,8 +50,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `sbsImages`,
-        path: `${__dirname}/src/sbsImages/Tiziano`,
+        name: `healthcareTiziano`,
+        path: `${__dirname}/src/sbsImages/healthcare/Tiziano`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `homeGallery`,
+        path: `${__dirname}/src/sbsImages/home`,
       },
     },
     {

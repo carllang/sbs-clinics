@@ -7,7 +7,7 @@ import Testimonials from 'src/components/Testimonials';
 import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
 import { Lightbox } from 'src/components/Lightbox';
 import { GalleryWithThumbnail } from 'src/components/ImageGallery/GalleryWithThumbnail';
-import Gallery from 'src/components/Gallery';
+import Gallery from 'src/components/Home/Gallery';
 import { PopupboxManager } from 'react-popupbox';
 
 const homePageGallery = [
@@ -38,7 +38,6 @@ class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props;
-
     return (
       <PageTransition>
         <Layout page="home">
@@ -73,7 +72,7 @@ class IndexPage extends React.Component {
             </p>
             <Lightbox />
             <Gallery
-              images={homePageGallery}
+              images={data.sbsImages}
               onGalleryImageClick={this.onGalleryImageClick}
             />
           </LayoutContainer>
@@ -121,6 +120,19 @@ export const query = graphql`
         node {
           relativePath
           name
+        }
+      }
+    }
+    sbsImages: allFile(filter: { sourceInstanceName: { eq: "homeGallery" } }) {
+      edges {
+        node {
+          relativePath
+          name
+          childImageSharp {
+            sizes(maxWidth: 5000) {
+              ...GatsbyImageSharpSizes
+            }
+          }
         }
       }
     }

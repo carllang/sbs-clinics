@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import TizianoImage from '../SBSImages/Tiziano/index.js';
+import SBSImage from '../SBSImages/index.js';
 
 import caseStudies from '../../jsonData/CaseStudies';
 
@@ -25,7 +25,7 @@ const ImageContainer = styled.div`
 const renderImages = images => {
   return images.map((image, key) => (
     <ImageContainer key={key} onClick={() => {}}>
-      <TizianoImage image={image.name} style={{ width: '100%' }} />
+      <SBSImage image={image.name} style={{ width: '100%' }} />
     </ImageContainer>
   ));
 };

@@ -4,7 +4,7 @@ import Layout from 'src/components/Layout';
 import SEO from 'src/components/seo';
 import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
 import styled from 'styled-components';
-import TizianoImage from '../components/SBSImages/Tiziano/index.js';
+import SBSImage from '../components/SBSImages/index.js';
 
 const ImageCopySection = styled.section`
   display: flex;
@@ -55,13 +55,13 @@ const Services = () => {
             expectations.
           </StyledArticle>
           <ImageContainer>
-            <TizianoImage image="IMG_3185.JPG" imageQuery="images" />
+            <SBSImage image="IMG_3185.JPG" imageQuery="images" />
           </ImageContainer>
         </ImageCopySection>
 
         <ImageCopySection>
           <ImageContainer pos="left">
-            <TizianoImage image="IMG_3361.JPG" imageQuery="images" />
+            <SBSImage image="IMG_3361.JPG" imageQuery="images" />
           </ImageContainer>
           <StyledArticle>
             <h1>Dedicated Construction & Implementation Services</h1>
@@ -82,12 +82,12 @@ const Services = () => {
             expectations.
           </StyledArticle>
           <ImageContainer>
-            <TizianoImage image="IMG_3308.JPG" imageQuery="images" />
+            <SBSImage image="IMG_3308.JPG" imageQuery="images" />
           </ImageContainer>
         </ImageCopySection>
         <ImageCopySection>
           <ImageContainer pos="left">
-            <TizianoImage image="IMG_3567.JPG" imageQuery="images" />
+            <SBSImage image="IMG_3567.JPG" imageQuery="images" />
           </ImageContainer>
           <StyledArticle>
             <h1>Planning & Advisory Service</h1>
@@ -104,18 +104,3 @@ const Services = () => {
 };
 
 export default Services;
-
-// export const query = graphql`
-//   query {
-//     allWordpressPage {
-//       edges {
-//         node {
-//           title
-//           status
-//           date
-//           content
-//         }
-//       }
-//     }
-//   }
-// `;

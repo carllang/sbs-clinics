@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from 'src/components/Layout';
 import SEO from 'src/components/seo';
 import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
-import CaseStudySection from 'src/components/CaseStudy/Section';
+import CaseStudySection from 'src/components/CaseStudies/Section';
 
 const CaseStudies = () => {
   return (
@@ -16,18 +16,3 @@ const CaseStudies = () => {
 };
 
 export default CaseStudies;
-
-// export const query = graphql`
-//   query {
-//     allWordpressPage {
-//       edges {
-//         node {
-//           title
-//           status
-//           date
-//           content
-//         }
-//       }
-//     }
-//   }
-// `;

@@ -24,25 +24,3 @@ const News = () => {
 };
 
 export default News;
-
-// export const query = graphql`
-//   query {
-//     allMarkdownRemark {
-//       edges {
-//         node {
-//           excerpt
-//           headings {
-//             value
-//             depth
-//           }
-//           fileAbsolutePath
-//           frontmatter {
-//             title
-//             path
-//             date
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;

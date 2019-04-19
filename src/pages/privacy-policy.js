@@ -13,20 +13,3 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
-
-// export const query = graphql`
-//   query {
-//     allMarkdownRemark(
-//       filter: { frontmatter: { path: { regex: "/privacy-policy/" } } }
-//     ) {
-//       edges {
-//         node {
-//           html
-//           frontmatter {
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;

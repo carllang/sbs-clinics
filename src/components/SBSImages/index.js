@@ -2,12 +2,12 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-const TizianoImage = props => (
+const SBSImage = props => (
   <StaticQuery
     query={graphql`
       query {
         sbsImages: allFile(
-          filter: { sourceInstanceName: { eq: "sbsImages" } }
+          filter: { sourceInstanceName: { eq: "healthcareTiziano" } }
         ) {
           edges {
             node {
@@ -24,18 +24,17 @@ const TizianoImage = props => (
       }
     `}
     render={data => {
-      console.log(props);
       const image = data.sbsImages.edges.find(n => {
         return n.node.relativePath.includes(props.image);
       });
       if (!image) {
         return null;
       }
-
       const imageSizes = image.node.childImageSharp.sizes;
+      console.log('imageSizes', imageSizes);
       return <Img {...props} sizes={imageSizes} fadeIn />;
     }}
   />
 );
 
-export default TizianoImage;
+export default SBSImage;
