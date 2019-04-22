@@ -12,7 +12,6 @@ const Li = styled.li`
   font-family: 'Open Sans';
   a {
     font-size: 1em;
-    color: #ffffff;
   }
 
   @media all and (min-width: 767px) {

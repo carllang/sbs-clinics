@@ -36,6 +36,9 @@ const StyledSection = styled.div`
 
 const ContentWrapper = styled.section`
   width: 90%;
+  @media all and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledLabel = styled.label`
@@ -46,6 +49,9 @@ const StyledLabel = styled.label`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  @media all and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const CaseStudies = ({ data }) => {
