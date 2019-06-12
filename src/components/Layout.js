@@ -18,13 +18,14 @@ const Container = styled.div`
 
 const DetailsContainer = styled.div`
   margin-right: 20px;
-  color: #000000;
-  margin-top: 10px;
+  color: #ffffff;
+  margin-top: 18px;
   display: inline-block;
   position: absolute;
   top: 0px;
-  right: 0px;
+  left: 200px;
   z-index: 9;
+  font-size: 0.8em;
   font-weight: bold;
   @media only screen and (max-width: 480px) {
     display: none;
@@ -68,9 +69,9 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
           page={page}
           headerTitle={headerTitle}
         />
-        {/* <DetailsContainer>
-          +44(0)207 438 2005 enquiries@sbs-intex.co.uk
-        </DetailsContainer> */}
+        <DetailsContainer>
+          +44(0)207 438 2005 &nbsp;&nbsp;&nbsp;enquiries@sbs-intex.co.uk
+        </DetailsContainer>
         <Logo className="logo" />
 
         <div className={`page-content bottom-container ${page}`}>

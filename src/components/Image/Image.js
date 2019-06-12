@@ -41,7 +41,7 @@ const Image = props => (
       }
 
       const imageSizes = image.node.childImageSharp.sizes;
-      return <Img {...props} sizes={imageSizes} fadeIn />;
+      return <Img {...props} sizes={imageSizes} />;
     }}
   />
 );

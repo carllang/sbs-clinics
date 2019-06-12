@@ -148,19 +148,19 @@ const Header = ({ menuLinks, page, headerTitle = '' }) => {
           <ImageGallery
             images={[
               {
-                src: 'nastuh-abootalebi-284877-unsplash.jpg',
+                src: 'IMG_3332.JPG',
                 title: 'Smart Building Solutions',
               },
               {
-                src: 'samuel-zeller-110931-unsplash.jpg',
+                src: 'IMG_3308.JPG',
                 title: 'Dedicated Design Teams',
               },
               {
-                src: 'christopher-burns-368617-unsplash.jpg',
+                src: 'IMG_3616.JPG',
                 title: 'Expert Craftsmen',
               },
               {
-                src: 'daniel-frank-201417-unsplash.jpg',
+                src: 'IMG_3361.JPG',
                 title: 'Friendly Consultation',
               },
             ]}
