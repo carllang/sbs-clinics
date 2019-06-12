@@ -13,7 +13,7 @@ const TopHeaderContainer = styled.div`
   width: 100%;
   border-bottom: 4px solid;
   color: #000000;
-  padding: 10px 0;
+  padding: 14px 0;
 
   animation-name: flash_border;
   animation-duration: 10s;

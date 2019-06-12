@@ -6,6 +6,9 @@ const StyledLogo = styled.span`
   z-index: 11;
   width: 157px;
   height: 100%;
+  position: absolute;
+  top: 3px;
+  left: 0px;
   @media all and (max-width: 768px) {
     #drawer-toggle:checked ~ .page-content {
       position: relative;
@@ -16,7 +19,7 @@ const StyledLogo = styled.span`
 const Logo = props => {
   return (
     <StyledLogo {...props}>
-      <Image image="header.png" imageQuery="images" />
+      <Image image="sbs-transparent.png" imageQuery="images" />
     </StyledLogo>
   );
 };
