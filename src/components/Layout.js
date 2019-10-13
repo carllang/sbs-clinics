@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Header } from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import { Logo } from 'src/components/Atomic/Logo';
-import QuoteButton from 'src/components/QuoteButton';
+import ActionButton from 'src/components/ActionButton';
 
 import './layout.scss';
 import './nav.css';
@@ -77,7 +77,7 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
         <div className={`page-content bottom-container ${page}`}>
           {page !== 'request-a-quote' ? (
             <QuoteButtonContainer>
-              <QuoteButton />
+              <ActionButton label="Request a quote!" icon="assignment" />
             </QuoteButtonContainer>
           ) : null}
 

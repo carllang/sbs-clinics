@@ -4,14 +4,13 @@ import Layout from 'src/components/Layout';
 import SEO from 'src/components/seo';
 import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import EmailIcon from '@material-ui/icons/Email';
-import SendIcon from '@material-ui/icons/Send';
 import SubjectIcon from '@material-ui/icons/Subject';
 import MessageIcon from '@material-ui/icons/Message';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
+import ActionButton from 'src/components/ActionButton';
 
 // window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
 const StyledForm = styled.form`
@@ -168,7 +167,6 @@ class Contact extends React.Component {
                       name="email"
                     />
                   </TextFieldWrapper>
-
                   <TextFieldWrapper>
                     <IconWrapper>
                       <SubjectIcon />
@@ -200,22 +198,7 @@ class Contact extends React.Component {
                       name="message"
                     />
                   </TextFieldWrapper>
-
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    size="large"
-                    style={{
-                      width: '250px',
-                      maxHeight: '60px',
-                      minWidth: '30px',
-                      minHeight: '30px',
-                    }}
-                    onClick={this.onSubmit}
-                  >
-                    Send
-                    <SendIcon style={{ marginLeft: '10px' }} />
-                  </Button>
+                  <ActionButton label="Send" />,
                 </StyledForm>
               ) : (
                 <div>Email sent!</div>

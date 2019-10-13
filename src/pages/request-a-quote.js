@@ -4,13 +4,14 @@ import Layout from 'src/components/Layout';
 import SEO from 'src/components/seo';
 import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+
 import EmailIcon from '@material-ui/icons/Email';
-import SendIcon from '@material-ui/icons/Send';
+
 import PhoneIcon from '@material-ui/icons/Phone';
 import MessageIcon from '@material-ui/icons/Message';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import TextField from '@material-ui/core/TextField';
+import ActionButton from 'src/components/ActionButton';
 
 // window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
 const StyledForm = styled.section`
@@ -174,22 +175,7 @@ class RequestAQuote extends React.Component {
                       />
                     </TextFieldWrapper>
                   </FormWrapper>,
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    size="large"
-                    style={{
-                      maxWidth: '250px',
-                      maxHeight: '60px',
-                      minWidth: '30px',
-                      minHeight: '30px',
-                      margin: '20px 0 0 34px',
-                    }}
-                    key={1}
-                  >
-                    Send request
-                    <SendIcon style={{ marginLeft: '10px' }} />
-                  </Button>,
+                  <ActionButton label="Send request" />,
                 ]
               ) : (
                 <div>Request sent!</div>
