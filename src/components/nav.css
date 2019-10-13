@@ -4,6 +4,9 @@
   display: flex;
   flex: 1;
   justify-content: flex-end;
+  background-color: #000000;
+  position: fixed;
+  opacity: 0.6;
 }
 
 .effect-1 {
@@ -15,7 +18,7 @@
   bottom: -4px;
   width: 100%;
   height: 4px;
-  background: #29b6f6;
+  background: #3f51b5;
   transform:  scaleX(0);
 
 }

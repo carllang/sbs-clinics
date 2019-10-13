@@ -21,7 +21,7 @@ const DetailsContainer = styled.div`
   color: #ffffff;
   margin-top: 18px;
   display: inline-block;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 200px;
   z-index: 9;
@@ -70,7 +70,7 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
           headerTitle={headerTitle}
         />
         <DetailsContainer>
-          +44(0)207 438 2005 &nbsp;&nbsp;&nbsp;enquiries@sbs-intex.co.uk
+          +44(0)207 80083 &nbsp;&nbsp;&nbsp;enquiries@sbs-intex.co.uk
         </DetailsContainer>
         <Logo className="logo" />
 
