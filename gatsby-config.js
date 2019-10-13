@@ -21,10 +21,6 @@ module.exports = {
         link: '/services',
       },
       {
-        name: 'News',
-        link: '/news',
-      },
-      {
         name: 'Case studies',
         link: '/case-studies',
       },
