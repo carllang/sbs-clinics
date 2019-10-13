@@ -11,7 +11,7 @@ const TopHeaderContainer = styled.div`
   right: 0px;
   z-index: 9;
   width: 100%;
-  border-bottom: 4px solid;
+  border-bottom: 2px solid;
   color: #000000;
   padding: 14px 0;
 
