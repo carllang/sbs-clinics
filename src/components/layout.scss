@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+ 
 }
 
 article,
@@ -295,6 +296,7 @@ h2 {
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
+  // -webkit-text-stroke : 1px #000000;
 }
 
 h3 {

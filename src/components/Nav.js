@@ -72,6 +72,9 @@ const Nav = ({ menuLinks, colour }) => {
                     <Link to="/residential" className="effect-1">
                       Residential
                     </Link>
+                    <Link to="/commercial" className="effect-1">
+                      Commercial
+                    </Link>
                   </div>
                 )}
               </Li>

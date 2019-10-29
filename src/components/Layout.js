@@ -77,7 +77,7 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
         <div className={`page-content bottom-container ${page}`}>
           {page !== 'request-a-quote' ? (
             <QuoteButtonContainer>
-              <ActionButton label="Request a quote!" icon="assignment" />
+              <ActionButton label="Request a quote" icon="assignment" />
             </QuoteButtonContainer>
           ) : null}
 
