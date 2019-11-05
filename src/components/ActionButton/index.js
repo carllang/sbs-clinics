@@ -40,7 +40,7 @@ const StyledButton = styled(Button)`
 
 const ActionButton = ({ label, icon }) => {
   return (
-    <Link to="request-a-quote" style={{ textDecoration: 'none' }}>
+    <Link to="contact" style={{ textDecoration: 'none' }}>
       <StyledButton variant="contained" color="primary" size="large">
         {label}
         <div className="arrow">

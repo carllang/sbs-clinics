@@ -70,12 +70,12 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
           headerTitle={headerTitle}
         />
         <DetailsContainer>
-          +44(0)207 80083 &nbsp;&nbsp;&nbsp;enquiries@sbs-intex.co.uk
+          +44 (0) 2078460083 &nbsp;&nbsp;&nbsp;enquiries@sbs-intex.co.uk
         </DetailsContainer>
         <Logo className="logo" />
 
         <div className={`page-content bottom-container ${page}`}>
-          {page !== 'request-a-quote' ? (
+          {page !== 'contact' ? (
             <QuoteButtonContainer>
               <ActionButton label="Request a quote" icon="assignment" />
             </QuoteButtonContainer>

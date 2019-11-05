@@ -7,6 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 import EmailIcon from '@material-ui/icons/Email';
 import SubjectIcon from '@material-ui/icons/Subject';
 import MessageIcon from '@material-ui/icons/Message';
+import PhoneIcon from '@material-ui/icons/Phone';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
@@ -133,7 +134,7 @@ class Contact extends React.Component {
         <SEO title="Contact Us" />
 
         <LayoutContainer>
-          <h1>Get in touch</h1>
+          <h1>Get in touch or request a quote</h1>
           <p>Please contact us using the form provided or call us.</p>
           <FlexboxWrapper>
             <ContentWrapper>
@@ -165,6 +166,18 @@ class Contact extends React.Component {
                       variant="filled"
                       onChange={this.onChange}
                       name="email"
+                    />
+                  </TextFieldWrapper>
+                  <TextFieldWrapper>
+                    <IconWrapper>
+                      <PhoneIcon />
+                    </IconWrapper>
+                    <TextField
+                      id="input-with-icon-grid"
+                      label="Phone"
+                      fullWidth
+                      className={classes.root}
+                      variant="filled"
                     />
                   </TextFieldWrapper>
                   <TextFieldWrapper>

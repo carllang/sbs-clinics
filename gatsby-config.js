@@ -9,10 +9,6 @@ module.exports = {
         link: '/',
       },
       {
-        name: 'About',
-        link: '/about',
-      },
-      {
         name: 'Sectors',
         link: '/sectors',
       },
@@ -27,10 +23,6 @@ module.exports = {
       {
         name: 'Contact',
         link: '/contact',
-      },
-      {
-        name: 'Quote',
-        link: '/request-a-quote',
       },
     ],
   },
