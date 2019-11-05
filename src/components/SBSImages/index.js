@@ -31,7 +31,6 @@ const SBSImage = props => (
         return null;
       }
       const imageSizes = image.node.childImageSharp.sizes;
-      console.log('imageSizes', imageSizes);
       return <Img {...props} sizes={imageSizes} fadeIn />;
     }}
   />

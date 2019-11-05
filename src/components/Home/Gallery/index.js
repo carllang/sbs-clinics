@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import posed from 'react-pose';
 
 const SectionHomeGallery = styled.section`
   display: flex;
@@ -23,6 +24,17 @@ const ImageContainer = styled.div`
     margin-bottom: 20px;
   }
 `;
+const Box = posed.div({
+  hoverable: true,
+  init: {
+    scale: 1,
+    boxShadow: '0px 0px 0px rgba(0,0,0,0)',
+  },
+  hover: {
+    scale: 1.1,
+    boxShadow: '0px 5px 10px rgba(0,0,0,0.3)',
+  },
+});
 
 class Gallery extends Component {
   renderGallery = () => {
@@ -31,12 +43,14 @@ class Gallery extends Component {
     return images.edges.map((n, key) => {
       return (
         <ImageContainer key={key} onClick={() => onGalleryImageClick(key)}>
-          <Img
-            image={n.node.relativePath}
-            sizes={n.node.childImageSharp.sizes}
-            fadeIn
-            style={{ width: '100%' }}
-          />
+          <Box className="box">
+            <Img
+              image={n.node.relativePath}
+              sizes={n.node.childImageSharp.sizes}
+              fadeIn
+              style={{ width: '100%' }}
+            />
+          </Box>
         </ImageContainer>
       );
     });

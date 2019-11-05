@@ -113,8 +113,6 @@ const TitleWrapper = styled.h2`
   }
 `;
 
-const Border = styled.div``;
-
 const renderHeaderImage = page => {
   switch (page) {
     case 'about':

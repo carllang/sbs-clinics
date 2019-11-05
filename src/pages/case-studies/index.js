@@ -41,11 +41,6 @@ const ContentWrapper = styled.section`
   }
 `;
 
-const StyledLabel = styled.label`
-  display: block;
-  font-weight: bold;
-`;
-
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
