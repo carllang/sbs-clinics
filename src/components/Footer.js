@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
-import Nav from 'src/components/Nav';
-import './nav.css';
+import React from "react";
+import styled from "styled-components";
+import { LayoutContainer } from "src/components/Layout/LayoutContainer";
+import Nav from "src/components/Nav";
+import "./nav.css";
 
 const FooterWrapper = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const FooterWrapper = styled.div`
 
 const Footer = ({ siteTitle, menuLinks }) => {
   return (
-    <div style={{ borderTop: '1px solid #efefef', backgroundColor: '#ffffff' }}>
+    <div style={{ borderTop: "1px solid #efefef", backgroundColor: "#ffffff" }}>
       <LayoutContainer>
         <FooterWrapper className="footer">
           <span className="footer-title">{siteTitle} </span>
@@ -34,9 +34,9 @@ const Footer = ({ siteTitle, menuLinks }) => {
             menuLinks={[
               ...menuLinks,
               {
-                name: 'Privacy Policy',
-                link: 'privacy-policy',
-              },
+                name: "Privacy Policy",
+                link: "/privacy-policy"
+              }
             ]}
             colour="black"
           />

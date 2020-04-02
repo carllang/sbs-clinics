@@ -1,15 +1,15 @@
-import React from 'react';
-import PageTransition from 'gatsby-plugin-page-transitions';
-import styled from 'styled-components';
-import Layout from 'src/components/Layout';
-import SEO from 'src/components/seo';
-import Testimonials from 'src/components/Testimonials';
-import { LayoutContainer } from 'src/components/Layout/LayoutContainer';
-import { Lightbox } from 'src/components/Lightbox';
-import { GalleryWithThumbnail } from 'src/components/ImageGallery/GalleryWithThumbnail';
-import Gallery from 'src/components/Home/Gallery';
-import { PopupboxManager } from 'react-popupbox';
-import posed, { PoseGroup } from 'react-pose';
+import React from "react";
+import PageTransition from "gatsby-plugin-page-transitions";
+import styled from "styled-components";
+import Layout from "src/components/Layout";
+import SEO from "src/components/seo";
+import Testimonials from "src/components/Testimonials";
+import { LayoutContainer } from "src/components/Layout/LayoutContainer";
+import { Lightbox } from "src/components/Lightbox";
+import { GalleryWithThumbnail } from "src/components/ImageGallery/GalleryWithThumbnail";
+import Gallery from "src/components/Home/Gallery";
+import { PopupboxManager } from "react-popupbox";
+import posed, { PoseGroup } from "react-pose";
 
 const TestimonialWrapper = styled.section`
   background-image: ${props => props.image};
@@ -18,93 +18,86 @@ const TestimonialWrapper = styled.section`
 const PosedContainer = posed.div({
   enter: {
     opacity: 1,
-    y: 0,
+    y: 0
   },
   exit: {
     opacity: 0,
-    y: 50,
-  },
+    y: 50
+  }
 });
 
 class IndexPage extends React.Component {
   onGalleryImageClick = id => {
     const { data } = this.props;
     PopupboxManager.open({
-      content: <GalleryWithThumbnail images={data.sbsImages} gotoSlide={id} />,
+      content: <GalleryWithThumbnail images={data.sbsImages} gotoSlide={id} />
     });
   };
 
   render() {
     const { data } = this.props;
     return (
-      <PageTransition>
-        <Layout page="home">
-          <LayoutContainer>
-            <SEO
-              title="Home"
-              keywords={[`construction`, `clinic`, `interior`]}
-            />
-            <PoseGroup animateOnMount>
-              <PosedContainer key={1}>
-                <h1>Specialist Design and Build Contractors</h1>
+      <Layout page="home">
+        <LayoutContainer>
+          <SEO title="Home" keywords={[`construction`, `clinic`, `interior`]} />
+          <PoseGroup animateOnMount>
+            <PosedContainer key={1}>
+              <h1>Specialist Design and Build Contractors</h1>
 
-                <p>Welcome to {data.site.siteMetadata.title}.</p>
-                <p>
-                  We are a diverse and dynamic construction company specialising
-                  in bespoke tailor made solutions at affordable rates. Whether
-                  you are residential or commercial we offer a unique range of
-                  services to meet your expectations.
-                </p>
-                <p>
-                  Unlike our competitors we provide cost effective results that
-                  save you time and most importantly money, allowing you to
-                  focus on your own goals.
-                </p>
-                <p>
-                  We source all of our products and materials from a vast array
-                  of suppliers who are based within the UK and in Europe
-                  ensuring you receive the finest quality for the lowest
-                  possible price.
-                </p>
-                <p>
-                  Our team consists of expert tradesmen and professionals who
-                  ensure exceptional delivery for all your building and
-                  construction needs. Give us a call or drop us a line for a
-                  friendly consultation.
-                </p>
-              </PosedContainer>
-            </PoseGroup>
+              <p>Welcome to {data.site.siteMetadata.title}.</p>
+              <p>
+                We are a diverse and dynamic construction company specialising
+                in bespoke tailor made solutions at affordable rates. Whether
+                you are residential or commercial we offer a unique range of
+                services to meet your expectations.
+              </p>
+              <p>
+                Unlike our competitors we provide cost effective results that
+                save you time and most importantly money, allowing you to focus
+                on your own goals.
+              </p>
+              <p>
+                We source all of our products and materials from a vast array of
+                suppliers who are based within the UK and in Europe ensuring you
+                receive the finest quality for the lowest possible price.
+              </p>
+              <p>
+                Our team consists of expert tradesmen and professionals who
+                ensure exceptional delivery for all your building and
+                construction needs. Give us a call or drop us a line for a
+                friendly consultation.
+              </p>
+            </PosedContainer>
+          </PoseGroup>
 
-            <Lightbox />
-            <Gallery
-              images={data.sbsImages}
-              onGalleryImageClick={this.onGalleryImageClick}
-            />
-          </LayoutContainer>
-          <TestimonialWrapper image={data.images.edges[0].node.relativePath}>
-            <Testimonials
-              testimonials={[
-                {
-                  name: 'A. Harrow',
-                  company: 'Dental Surgery, Chelsea',
-                  quote: 'Excellent service and delightful results.',
-                },
-                {
-                  name: 'J. Smith',
-                  company: 'Cromwell Hospital',
-                  quote: 'We would recommend SBS to our company partners',
-                },
-                {
-                  name: 'K. Wallace',
-                  company: 'Wallace Dental',
-                  quote:
-                    'Above and beyond quality and exceptional craftsmanship',
-                },
-              ]}
-            />
-          </TestimonialWrapper>
-        </Layout>
-      </PageTransition>
+          <Lightbox />
+          <Gallery
+            images={data.sbsImages}
+            onGalleryImageClick={this.onGalleryImageClick}
+          />
+        </LayoutContainer>
+        <TestimonialWrapper image={data.images.edges[0].node.relativePath}>
+          <Testimonials
+            testimonials={[
+              {
+                name: "A. Harrow",
+                company: "Dental Surgery, Chelsea",
+                quote: "Excellent service and delightful results."
+              },
+              {
+                name: "J. Smith",
+                company: "Cromwell Hospital",
+                quote: "We would recommend SBS to our company partners"
+              },
+              {
+                name: "K. Wallace",
+                company: "Wallace Dental",
+                quote: "Above and beyond quality and exceptional craftsmanship"
+              }
+            ]}
+          />
+        </TestimonialWrapper>
+      </Layout>
     );
   }
 }
