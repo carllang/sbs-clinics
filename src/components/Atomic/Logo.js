@@ -5,7 +5,6 @@ import { Image } from 'src/components/Image';
 const StyledLogo = styled.span`
   z-index: 11;
   width: 157px;
-  height: 100%;
   position: fixed;
   top: 3px;
   left: 0px;

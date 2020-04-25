@@ -75,12 +75,6 @@ const Layout = ({ children, page, headerTitle }, ...props) => (
         <Logo className="logo" />
 
         <div className={`page-content bottom-container ${page}`}>
-          {page !== 'contact' ? (
-            <QuoteButtonContainer>
-              <ActionButton label="Request a quote" icon="assignment" />
-            </QuoteButtonContainer>
-          ) : null}
-
           <Container>
             <MainWrapper style={{ minHeight: '900px' }}>{children}</MainWrapper>
             <Footer

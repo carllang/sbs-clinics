@@ -49,33 +49,32 @@ const Wrapper = styled.div`
   }
 `;
 
-const CaseStudyCategory = ({ data }) => {
+const OurProjects = ({ data }) => {
   return (
-    <Layout page="case-studies" headerTitle="Case Studies">
-      <SEO title="Case Studies" />
+    <Layout page="our-projects" headerTitle="Our Projects">
+      <SEO title="Our Projects" />
       <LayoutContainer>
         <StyledArticle pos="left">
-          <h1>Our work</h1>
+          <h1>Our projects</h1>
           <p>The following are projects we have worked on:</p>
         </StyledArticle>
         <Wrapper>
           <StyledSection>
             <ContentWrapper>
-              <Link to="/case-study/healthcare/current/tiziano">
+              <Link to="/project/#">
                 <figure className="effect-sarah">
                   <ImageContainer className="image">
                     <Img
                       sizes={
-                        data.casestudycategoryImages.edges[1].node
-                          .childImageSharp.sizes
+                        data.projectImages.edges[1].node.childImageSharp.sizes
                       }
                       fadeIn
                       style={{ width: '100%' }}
                     />
                   </ImageContainer>
                   <figcaption>
-                    <h2>Current</h2>
-                    <p>Click here to see this impressive case study</p>
+                    <h2>Healthcare</h2>
+                    <p>Click here to see this impressive project</p>
                   </figcaption>
                 </figure>
               </Link>
@@ -84,21 +83,41 @@ const CaseStudyCategory = ({ data }) => {
 
           <StyledSection>
             <ContentWrapper>
-              <Link to="/case-study/healthcare/current/tiziano/">
+              <Link to="/project/#">
                 <figure className="effect-sarah">
                   <ImageContainer className="image">
                     <Img
                       sizes={
-                        data.casestudycategoryImages.edges[0].node
-                          .childImageSharp.sizes
+                        data.projectImages.edges[0].node.childImageSharp.sizes
                       }
                       fadeIn
                       style={{ width: '100%' }}
                     />
                   </ImageContainer>
                   <figcaption>
-                    <h2>Upcoming Projects</h2>
-                    <p>Click here to see some of our exciting new projects</p>
+                    <h2>Residential</h2>
+                    <p>Click here to see our approach to this bespoke build</p>
+                  </figcaption>
+                </figure>
+              </Link>
+            </ContentWrapper>
+          </StyledSection>
+          <StyledSection>
+            <ContentWrapper>
+              <Link to="/project/#">
+                <figure className="effect-sarah">
+                  <ImageContainer className="image">
+                    <Img
+                      sizes={
+                        data.projectImages.edges[0].node.childImageSharp.sizes
+                      }
+                      fadeIn
+                      style={{ width: '100%' }}
+                    />
+                  </ImageContainer>
+                  <figcaption>
+                    <h2>Commercial</h2>
+                    <p>Click here to see our approach to this bespoke build</p>
                   </figcaption>
                 </figure>
               </Link>
@@ -110,10 +129,10 @@ const CaseStudyCategory = ({ data }) => {
   );
 };
 
-export default CaseStudyCategory;
+export default OurProjects;
 export const query = graphql`
-  query caseStudiesCategory {
-    casestudycategoryImages: allFile(
+  query ourProjects {
+    projectImages: allFile(
       filter: { sourceInstanceName: { eq: "casestudies" } }
     ) {
       edges {

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SBSImage from '../SBSImages/index.js';
 
-import caseStudies from '../../jsonData/CaseStudies';
+import ourProjects from '../../jsonData/OurProjects';
 
 const ImageWrapper = styled.section`
   display: flex;
@@ -34,10 +34,10 @@ const Section = () => {
   return (
     <div>
       <header>
-        <h2>{caseStudies.section.dental.name}</h2>
+        <h2>{ourProjects.section.dental.name}</h2>
       </header>
       <ImageWrapper>
-        {renderImages(caseStudies.section.dental.images)}
+        {renderImages(ourProjects.section.dental.images)}
       </ImageWrapper>
     </div>
   );

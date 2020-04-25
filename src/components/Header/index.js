@@ -123,7 +123,7 @@ const renderHeaderImage = page => {
       return 'nastuh-abootalebi-284883-unsplash.jpg';
     case 'news':
       return 'worapong-kaewtong-553394-unsplash.jpg';
-    case 'case-studies':
+    case 'our-projects':
       return 'toa-heftiba-644507-unsplash.jpg';
     case 'contact':
       return 'marko-pekic-145777-unsplash.jpg';

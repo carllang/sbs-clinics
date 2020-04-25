@@ -9,9 +9,12 @@ import SubjectIcon from '@material-ui/icons/Subject';
 import MessageIcon from '@material-ui/icons/Message';
 import PhoneIcon from '@material-ui/icons/Phone';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import Description from '@material-ui/icons/Description';
 import TextField from '@material-ui/core/TextField';
+import Checkbox from '@material-ui/core/Checkbox';
 import axios from 'axios';
 import ActionButton from 'src/components/ActionButton';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 // window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
 const StyledForm = styled.form`
@@ -142,6 +145,21 @@ class Contact extends React.Component {
                 <StyledForm autoComplete="off">
                   <TextFieldWrapper>
                     <IconWrapper>
+                      <Description />
+                    </IconWrapper>
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          onChange={this.onChange}
+                          name="isQuote"
+                          color="black"
+                        />
+                      }
+                      label="Is this a request for a quote?"
+                    />
+                  </TextFieldWrapper>
+                  <TextFieldWrapper>
+                    <IconWrapper>
                       <AccountCircle />
                     </IconWrapper>
                     <TextField
@@ -178,6 +196,7 @@ class Contact extends React.Component {
                       fullWidth
                       className={classes.root}
                       variant="filled"
+                      onChange={this.onChange}
                     />
                   </TextFieldWrapper>
                   <TextFieldWrapper>

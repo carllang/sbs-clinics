@@ -17,8 +17,8 @@ module.exports = {
         link: '/services',
       },
       {
-        name: 'Case studies',
-        link: '/case-studies',
+        name: 'Our projects',
+        link: '/our-projects',
       },
       {
         name: 'Contact',
@@ -39,7 +39,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `casestudies`,
-        path: `${__dirname}/src/sbsImages/case-studies`,
+        path: `${__dirname}/src/sbsImages/our-projects`,
       },
     },
     {

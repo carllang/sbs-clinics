@@ -115,31 +115,6 @@ const Residential = ({ data }) => {
           </p>
           <p>&nbsp;</p>
         </article>
-        <ImageCopySection>
-          <StyledArticle pos="left">
-            <h1>Case study</h1>
-            Read more about our case study of the work done at
-          </StyledArticle>
-          <div style={{ width: '100%' }}>
-            <Link to="/case-study/healthcare/residential/#">
-              <figure className="effect-sarah">
-                <div className="image">
-                  <Img
-                    sizes={
-                      data.residentialImages.edges[3].node.childImageSharp.sizes
-                    }
-                    fadeIn
-                    style={{ width: '100%' }}
-                  />
-                </div>
-                <figcaption>
-                  <h2>Residential</h2>
-                  <p>Read more about this impressive case study</p>
-                </figcaption>
-              </figure>
-            </Link>
-          </div>
-        </ImageCopySection>
       </LayoutContainer>
     </Layout>
   );

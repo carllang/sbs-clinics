@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "@material-ui/core/Button";
-import { Link } from "gatsby";
-import SendIcon from "@material-ui/icons/Send";
-import AssignmentIcon from "@material-ui/icons/Assignment";
+import React from 'react';
+import styled from 'styled-components';
+import Button from '@material-ui/core/Button';
+import { Link } from 'gatsby';
+import SendIcon from '@material-ui/icons/Send';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const StyledButton = styled(Button)`
   max-width: 250px;
@@ -13,7 +13,7 @@ const StyledButton = styled(Button)`
   margin-top: 15px;
   padding-right: 60px;
   position: relative;
-  color: white;
+  color: black;
 
   .arrow {
     transition: right 0.2s linear;
@@ -40,14 +40,14 @@ const StyledButton = styled(Button)`
 
 const ActionButton = ({ label, icon }) => {
   return (
-    <Link to="/contact" style={{ textDecoration: "none" }}>
-      <StyledButton variant="contained" color="primary" size="large">
+    <Link to="/contact" style={{ textDecoration: 'none' }}>
+      <StyledButton variant="contained" color="grey" size="large">
         {label}
         <div className="arrow">
-          {icon === "assignment" ? (
-            <AssignmentIcon style={{ color: "white" }} />
+          {icon === 'assignment' ? (
+            <AssignmentIcon style={{ color: 'black' }} />
           ) : (
-            <SendIcon style={{ color: "white" }} />
+            <SendIcon style={{ color: 'black' }} />
           )}
         </div>
       </StyledButton>
