@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Ul = styled.ul`
   margin-bottom: 0px;
@@ -9,7 +9,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   list-style-type: none;
   margin: 0px 20px 0 0;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   a {
     font-size: 1em;
   }
@@ -27,7 +27,7 @@ const StyledLink = styled(Link)`
     font-weight: bold;
     font-size: 1em;
     color: #ffffff;
-    border-bottom: 4px solid #3f51b5;
+    border-bottom: 4px solid #efefef;
   }
 
   &:before {
@@ -35,7 +35,7 @@ const StyledLink = styled(Link)`
     height: 2px;
     background: darken($bg, 10%);
     transform: scaleX(0);
-    content: "";
+    content: '';
     transition: transform 0.5s ease;
   }
   &:hover:before {
@@ -50,12 +50,12 @@ const Nav = ({ menuLinks, colour }) => {
         <Ul>
           {menuLinks.map(link => {
             let hoverMenu = null;
-            if (link.link === "/sectors") {
-              hoverMenu = "hoverMenu";
+            if (link.link === '/sectors') {
+              hoverMenu = 'hoverMenu';
             }
 
             return (
-              <Li key={link.name} style={{ listStyleType: "none" }}>
+              <Li key={link.name} style={{ listStyleType: 'none' }}>
                 <StyledLink
                   to={link.link}
                   activeClassName="active-link"

@@ -35,7 +35,7 @@ const StyledSection = styled.div`
 `;
 
 const ContentWrapper = styled.section`
-  width: 90%;
+  width: 98%;
   @media all and (max-width: 768px) {
     width: 100%;
   }
